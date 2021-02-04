@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品详情页</title>
+<link rel="stylesheet" href="./style/reset.css">
+<link rel="stylesheet" href="./style/goodsDetail.css">
+</head>
+<body>
+
+<!-- 头部悬浮栏 -->
+<div class='navsContainer'>
+  <div class='navItem'>
+    <h4 class="leftNav">凡客日式免烫衬衫领尖扣 蓝色小方格</h4>
+    <div class="rightNav">
+      <p class="right1"> 产品描述&nbsp;&nbsp; |&nbsp;&nbsp; 评论 &nbsp;&nbsp;|&nbsp;&nbsp; 提问 </p>
+      <p class="right2"></p>
+    </div>
+  </div>    
+</div>
+
+<div id="container">
+  <!-- 头部栏 -->
+  <header>
+    <div id="title">
+      <div class="tit-main">
+        <div class="content">
+          <span class="welcome">您好，欢迎光临凡客诚品！</span>
+          <span class="login">登录</span>
+          <span>|</span>
+          <span class="register">注册</span>
+          <span class="myOrder">我的订单</span>
+          <span class="notice">网站公告</span>
+          <a href="#" class="weibo"></a>
+          <a href="#" class="wechat"></a>
+          <img src="../image/weixin.png" alt="" class="qrcode">
+        </div>
+      </div>
+    </div>
+
+    <!-- 搜索栏 -->
+    <div id="search">
+      <div class="srh-main">
+        <div class="content">
+          <div class="srh-btn">
+            <input type="text" placeholder=" 搜“休闲裤”，体验与众不同">
+            <button class="seek">搜索</button>
+            <button class="shopCart">购物车（1）</button> 
+                
+          </div>
+          
+          <div class="hot-srh">
+            <ul>
+              <li>热门搜索：</li>
+              <li>免烫衬衫</li>
+              <li>外套</li>
+              <li>针织衫</li>
+              <li>卫衣</li>
+              <li>休闲裤</li>
+              <li>帆布鞋</li>
+              <li>羽绒服</li>
+            </ul>
+          </div> 
+          <div class="cartGoods">
+            <div class="content">
+              <h3>最近加入的商品：</h3>
+              <div class="goods-detail">
+                <img src="../image/36x36.jpg" alt="">
+                <div>
+                  <span>休闲衬衫 法兰绒 男款 藏青色</span> <br>
+                  <span>￥158.00 X1</span>
+                </div>
+                <p>删除</p>
+              </div>
+              <div class="total">
+                <div>
+                  <span>共计(未计算促销折扣)</span> <br>
+                  <span>￥158</span>
+                </div>
+                <button>查看购物车(1件)</button>
+              </div>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div id="nav">
+      <div class="nav-main">
+        <a href="#"></a>
+        <ul class="navList">
+          <li>首页 </li>
+
+          <li class="fleece1">摇粒绒 
+            <ul class="fleece">
+              <li>摇粒绒</li>
+              <li>防羊羔绒</li>
+            </ul>
+          </li>
+          <li class="business1">商务衬衫 
+            <ul class="business">
+              <li>长袖免烫</li>
+              <li>舒适商务</li>
+              <li>高支衬衫</li>
+              <li>短袖免烫</li>
+              <li>短袖桑蚕丝</li>
+            </ul>
+          </li>
+          <li class="relax1">休闲衬衫 
+            <ul class="relax">
+              <li>牛津纺</li>
+              <li>法兰绒</li>
+              <li>灯芯绒</li>
+              <li>水洗棉</li>
+              <li>易打理</li>
+              <li>麻棉系列</li>
+              <li>复古风系列</li>
+              <li>女款</li>
+              <li>短袖休闲衬衫</li>
+            </ul>
+          </li>
+          <li class="sweater1">卫衣 
+            <ul class="sweater">
+              <li>时尚款</li>
+              <li>开衫</li>
+              <li>圆领</li>
+              <li>连帽</li>
+            </ul>
+          </li>
+          <li class="coat1">外套 
+            <ul class="coat">
+              <li>羽绒服</li>
+              <li>大衣</li>
+              <li>夹克</li>
+              <li>西服</li>
+              <li>摇粒绒</li>
+              <li>冲锋衣</li>
+            </ul>
+          </li>
+          <li class="knitwear1">针织衫 
+            <ul class="knitwear">
+              <li>圆领</li>
+              <li>V领开衫</li>
+              <li>polo领</li>
+              <li>高领</li>
+              <li>开衫</li>
+            </ul>
+          </li>
+          <li class="pants1">裤装 
+            <ul class="pants">
+              <li>牛仔裤</li>
+              <li>休闲裤</li>
+              <li>针织裤</li>
+              <li>运动系列</li>
+              <li>沙滩裤</li>
+              <li>短裤</li>
+              <li>半裙</li>
+            </ul>
+          </li>
+          <li class="shoe1">鞋 
+            <ul class="shoe">
+              <li>帆布鞋</li>
+              <li>休闲鞋</li>
+              <li>运动鞋</li>
+              <li>凉鞋</li>
+              <li>皮鞋</li>
+              <li>靴子</li>
+              <li>女鞋</li>
+            </ul>
+          </li>
+          <li class="furniture1">家具配饰 
+            <ul class="furniture">
+              <li>袜品</li>
+              <li>内衣</li>
+              <li>家居服</li>
+              <li>连裤袜</li>
+              <li>家居鞋</li>
+              <li>床品件套</li>
+              <li>毯</li>
+              <li>被</li>
+              <li>围巾</li>
+              <li>枕</li>
+              <li>抱枕 </li>
+              <li>手机壳</li>
+              <li>箱包</li>
+              <li>裙装</li>
+              <li>马甲</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- 中间内容栏 -->
+  <section class="wrap">
+    <!-- 单品详情栏 -->
+    <div id="detail">
+      <div class="detail-main">
+        <!-- 目录 -->
+        <div class="catalog">
+          <p>首 页 >&nbsp; 男 装 &nbsp;>&nbsp; 衬 衫 &nbsp;>&nbsp; 长袖衬衫 &nbsp;> &nbsp;&nbsp;&nbsp;&nbsp;凡客日式免烫衬衫领尖扣</p>
+        </div>
+        <!-- 标题 -->
+        <div class="title">
+          <h3>凡客日式免烫衬衫领尖扣 &nbsp;白色</h3>
+          <p>产品描述 &nbsp;&nbsp;| &nbsp;&nbsp;评论 &nbsp;&nbsp;|&nbsp;&nbsp; 提问 </p>
+        </div>
+        <!-- 商品内容介绍 -->
+        <div class="content">
+          <!-- 左侧选项 -->
+          <div class="options">
+            <p class="upper"></p>
+            <ul>
+              <li class="opt1 show"></li>
+              <li class="opt2"></li>
+              <li class="opt3"></li>
+              <li class="opt4"></li>
+              <li class="opt5"></li>
+              <li class="opt6"></li>
+              <li class="opt7"></li>
+              <li class="opt8"></li>
+              <li class="opt9"></li>
+              <li class="opt10"></li>
+            </ul>
+            <p class="under"> </p>
+          </div>
+          <!-- 中间展示图 -->
+          <div class="pic">
+            <img src="../image/pic.jpg" alt="">
+            <p class="videoLogo">
+              <img src="../image/start.png" alt="">
+            </p>
+            <!-- 遮罩层 -->
+            <div class="mask"></div>
+          </div>
+          <!-- 右侧详细内容 -->
+          <div class="rightContent">
+            <div class="pricearea">
+              <p class="discount">特 惠 价：</p> 
+              <p class="price"> <span>￥</span> <strong>318.00</strong> </p> 
+              <p class="recharge">充值后相当于:  ¥159.00</p> <br>
+              <span>充100返100，点击充值</span>
+            </div>
+            <div class="selectArea">
+              <div class="color">
+                <div class="colorTitle">
+                  <span>颜色：</span>
+                </div>
+                <div class="colorList">
+                  <ul>
+                    <li class="color1">
+                      <p>白色</p>
+                    </li>
+                    <li class="color2">
+                      <p>蓝色小方格</p>
+                    </li>
+                    <li class="color3">
+                      <p>藏蓝棋盘格</p>
+                    </li>
+                    <li class="color4">
+                      <p>蓝色</p>
+                    </li>
+                    <li class="color5">
+                      <p>蓝色条纹</p>
+                    </li>
+                    <li class="color6">
+                      <p>灰色</p>
+                    </li>
+                    <li class="color7">
+                      <p>灰色条纹</p>
+                    </li>
+                    <li class="color8">
+                      <p>浅灰色</p>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="size">
+                <div class="sizeTitle">
+                  <span>尺码：</span>
+                </div>
+                <div class="sizeList">
+                  <ul>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="num">
+                <div class="numTitle">
+                  <span>数量：</span>
+                </div>
+                <div class="numList"> 
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="checked">
+                <div class="checkedTitle">
+                  <span></span>
+                </div>
+                <div class="checkedList">
+                  <span>已选</span>
+                  <p>白色  &nbsp;&nbsp;&nbsp;&nbsp; 现在有货</p>
+                </div>
+              </div>
+              <div class="btn">
+                <button class="buyNow"> 立即购买</button>
+                <button class="addCart"> &nbsp;</button>
+              </div>
+            </div>
+            <div class="promotion">
+              <h4>优惠提示</h4>
+              <div class="promo1">
+                <ul>
+                  <li class="freeship">免邮</li>
+                  <p class="over199">全场购物满199元免运费</p>
+                </ul>
+              </div>
+              <div class="promo2">
+                <ul>
+                  <li class="cpn">优惠券</li>
+                  <li class="over200">满200减20</li>
+                  <li class="over100">满1000减150</li>
+                  <li class="new">新人有礼</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 放大镜图片 -->
+          <div class="bigPic">
+            <img src="../image/pic.jpg" alt="">
+          </div>
+        </div>
+        <!-- 产品属性说明 -->
+        <div class="introduce">
+          <ul>
+            <li>产品属性：(点击属性可查看同类商品)</li>
+            <li>http://item.vancl.com/6386554.html#anchorPinglun</li>
+            <li>详情图片：</li>
+            <li>注： 商品实际颜色以静物图为准</li>
+          </ul>
+        </div>
+        <!-- 产品图片列表 -->
+        <div class="imgList">
+          <img src="../image/jpstyle01.jpg" alt="" class="jpstyle01">
+          <img src="../image/jpstyle02.jpg" alt="" class="jpstyle02">
+          <img src="../image/usastyle.jpg" alt="" class="usastyle">
+          <img src="../image/bluecloth01.jpg" alt="">
+          <img src="../image/bluecloth02.jpg" alt="">
+          <img src="../image/comfortable.jpg" alt="">
+          <img src="../image/fastener01.jpg" alt="">
+          <img src="../image/fastener02.jpg" alt="">
+          <img src="../image/fastener03.jpg" alt="">
+          <img src="../image/easy.jpg" alt="">
+          <img src="../image/white01.jpg" alt="">
+          <img src="../image/white02.jpg" alt="">
+          <img src="../image/white03.jpg" alt="">
+          <img src="../image/white04.jpg" alt="">
+          <img src="../image/white05.jpg" alt="">
+          <img src="../image/white06.jpg" alt="">
+          <img src="../image/model1-1.jpg" alt="">
+          <img src="../image/model1-2.jpg" alt="">
+          <img src="../image/model1-3.jpg" alt="">
+          <img src="../image/model2-1.jpg" alt="">
+          <img src="../image/model2-2.jpg" alt="">
+          <img src="../image/model2-3.jpg" alt="">
+          <img src="../image/model3-1.jpg" alt="">
+          <img src="../image/model3-2.jpg" alt="">
+          <img src="../image/model3-3.jpg" alt="">
+          <img src="../image/model4-1.jpg" alt="">
+          <img src="../image/model4-2.jpg" alt="">
+          <img src="../image/model4-3.jpg" alt="">
+          <img src="../image/coat01.jpg" alt="">
+          <img src="../image/coat02.jpg" alt="">
+          <img src="../image/coat03.jpg" alt="">
+          <img src="../image/parameter01.jpg" alt="">
+          <img src="../image/parameter02.jpg" alt="">
+          <img src="../image/size01.jpg" alt="">
+          <img src="../image/size02.jpg" alt="">
+          <img src="../image/illustrate01.jpg" alt="">
+          <img src="../image/illustrate02.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- 评论推荐提问三连 -->
+      <div id="comment">
+        <!-- 产品推荐 -->
+        <div class="recommend">
+          <h4>推荐产品</h4>
+          <div class="goodsList">
+            <ul>
+              <li>
+                <img src="../image/recommend1.jpg" alt="">
+                <h4>凡客牛仔裤 修身直筒轻弹黑牛 男款 水洗黑</h4> <br>
+                <p>售价￥178</p>
+              </li>
+              <li>
+                <img src="../image/recommend2.jpg" alt="">
+                <h4>凡客日式免烫衬衫领尖扣 白色</h4> <br>                
+                <p>售价￥318</p>
+              </li>
+              <li>
+                <img src="../image/recommend3.jpg" alt="">
+                <h4>针织衫圆领 棉线可机洗 男款 灰色</h4> <br>
+                <p>售价￥148</p>
+              </li>
+                          
+           </ul>
+          </div>
+        </div>
+        <!-- 评论区 -->
+        <div class="contentArea">
+          <div class="new">
+            <h4>最新评论</h4>
+            <div class="input"> <input type="radio"> 全部评论 </div>
+            <div class="input"> <input type="radio"> 图片(4) </div>           
+            <p>我要评论</p>
+          </div>
+          <!-- 评论区内容 -->
+          <div class="detail">
+            <div class="wrap">
+              <div class="content1"> 
+                <div class="left">
+                  <p>不错，质量很好，买很多次了，凡客忠实粉丝！</p>
+                  <span>2021-01-07</span>
+                </div>
+                <div class="right">
+                  <span>颜色：蓝色小方格 </span>
+                  <span>尺码：M </span>
+                  <span>身高：161cm </span>
+                  <span>体重：50.0kg </span>
+                  <span class="size"> &lt;尺码合适&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**lviddggn_t*</span>
+                <p>VIP</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>很合体，性价比高</p>
+                  <span>2021-02-04</span>
+                </div>
+                <div class="right">
+                  <span>颜色：浅灰色 </span>
+                  <span>尺码：M </span>
+                  <span>身高：169cm </span>
+                  <span>体重：60.0kg </span>
+                  <span class="size"> &lt;尺码合适&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**junjie_chan*</span>
+                <p>VIP2</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>很不错啊……</p>
+                  <span>2021-01-05</span>
+                </div>
+                <div class="right">
+                  <span>颜色：绿色 </span>
+                  <span>尺码：S </span>
+                  <span>身高：170cm </span>
+                  <span>体重：65.0kg </span>
+                  <span class="size"> &lt;尺码正常&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**_Lee**muark*</span>
+                <p>VIP3</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>衬衣不错，质量很好，买很多次了，凡客忠实粉丝！</p>
+                  <span>2021-01-25</span>
+                </div>
+                <div class="right">
+                  <span>颜色：橙色条纹 </span>
+                  <span>尺码：M </span>
+                  <span>身高：160cm </span>
+                  <span>体重：55.0kg </span>
+                  <span class="size"> &lt;尺码偏大&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**mugerry*</span>
+                <p>VIP3</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>很合体，性价比高</p>
+                  <span>2021-01-08</span>
+                </div>
+                <div class="right">
+                  <span>颜色：白色 </span>
+                  <span>尺码：XL </span>
+                  <span>身高：180cm </span>
+                  <span>体重：85.0kg </span>
+                  <span class="size"> &lt;尺码偏小&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**monionzzz*</span>
+                <p>VIP</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>用料特别有心。 质感真的很好。比较挑身材。 我很喜欢！</p>
+                  <span>2021-02-05</span>
+                </div>
+                <div class="right">
+                  <span>颜色：红色 </span>
+                  <span>尺码：XL </span>
+                  <span>身高：180cm </span>
+                  <span>体重：85.0kg </span>
+                  <span class="size"> &lt;尺码偏小&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**zzzzz_zen*</span>
+                <p>VIP1</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>很容易起皱，辣鸡...</p>
+                  <span>2021-02-05</span>
+                </div>
+                <div class="right">
+                  <span>颜色：黑色 </span>
+                  <span>尺码：L </span>
+                  <span>身高：175cm </span>
+                  <span>体重：65.0kg </span>
+                  <span class="size"> &lt;尺码正常&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**muaen*</span>
+                <p>VIP</p>
+              </div>
+              <div class="content1"> 
+                <div class="left">
+                  <p>很合体，性价比高</p>
+                  <span>2021-02-02</span>
+                </div>
+                <div class="right">
+                  <span>颜色：黄色 </span>
+                  <span>尺码：M </span>
+                  <span>身高：167cm </span>
+                  <span>体重：85.0kg </span>
+                  <span class="size"> &lt;尺码偏小&gt; </span>
+                </div>
+              </div>
+              <div class="userInfo1">
+                <span>**muami_z#yyy*</span>
+                <p>VIP4</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 提问区 -->
+        <div class="ask">
+          <div class="new">
+            <h4>最新提问(共13条)</h4>          
+            <p>我要提问</p>
+          </div>
+          <!-- 问题区内容 -->
+          <div class="detail">
+            <ul>
+              <li>
+                <!-- 问题 -->
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>137****** :</span>
+                    <span>显示的充值后159，可是充值后，还是318呢</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-01-03</span>
+                    <span>我要回复(1)</span>
+                  </div>                
+                </div>
+                <!-- 回答 -->
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>亲爱的客户您好，单价318元，充100返100，您需要充值159元，充值成功后返您159元，结算时勾选余额支付，不是充值后变价的。感谢您的支持！</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>156****** :</span>
+                    <span>充值的钱，怎么申请退回</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-01-07</span>
+                    <span>我要回复(5)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>亲爱的客户您好，如有需要，您可以优先联系在线客服、微信客服或者电话客服实时处理。感谢您的支持！祝您购物愉快！O(∩_∩)O</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>188****** :</span>
+                    <span>充值300了，怎么下单买不是159呢</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-02-13</span>
+                    <span>我要回复(0)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>亲爱的客户您好，您充值时实际是打了五折的，并不是充值后折上折。感谢您的支持！祝您购物愉快！O(∩_∩)O</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>188****** :</span>
+                    <span>请问你们衣服怎么老缺货？我充值了买不到想要的号码</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-01-25</span>
+                    <span>我要回复(0)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>亲爱的客户您好，您反馈的问题会做为日后改善的参考，以便为广大用户提供更加优质的服务。给您带来的不便敬请谅解，感谢您的支持！</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>137****** :</span>
+                    <span>你好，我身高183厘米，体重85公斤。其他品牌衬衣L号，你家衬衣选择哪个尺码比较好？
+                      </span>
+                  </div>
+                  <div class="right">
+                    <span>2021-01-29</span>
+                    <span>我要回复(1)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>亲爱的客户您好，您可以尝试购买一件XL码的哦（注：推荐尺码仅供参考），感谢您的支持！祝您购物愉快！O(∩_∩)O</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>137****** :</span>
+                    <span>请问买什么东西可以送小姐姐？</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-02-04</span>
+                    <span>我要回复(123)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>你想得美....hhhhh</span>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <div class="left">
+                    <span class="q">Q</span>
+                    <span>137****** :</span>
+                    <span>特别好的购物 特别好的产品,继续支持</span>
+                  </div>
+                  <div class="right">
+                    <span>2021-01-30</span>
+                    <span>我要回复(0)</span>
+                  </div>                
+                </div>
+                <div class="answer" >
+                  <span class="a">A</span>
+                  <span>感谢支持，爱你哟！</span>
+                </div>
+              </li>              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section >
+
+  <!-- 底部栏 -->
+  <footer>
+    <!-- 帮助中心 -->
+    <div id="help">
+      <div class="help-main">
+        <div class="helpTop">
+          <div class="helpTop1">
+            <img src="../image/onlinecustomer.png" alt=""> <br>
+            <button> 7X9小时在线客服 </button>
+          </div>
+          <div class="helpTop2">
+            <img src="../image/seven.png" alt=""> <br>
+            <span>7天内退货</span> <br>
+            <span>购物满199元免运费</span>
+          </div>
+          <div class="helpTop3">
+            <img src="../image/fkqrcode.jpg" alt=""> <br>
+            <span>扫描下载凡客客户端</span>
+          </div>
+        </div>
+        <div class="helpBottom">
+          <ul>
+            <li>关于凡客</li>
+            <li>新手指南</li>
+            <li>配送范围及时间</li>
+            <li>支付</li>
+            <li>售后服务</li>
+            <li>帮助中心</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 版权栏 -->
+    <div id="copyright">
+      <div class="copy-main">
+        <div class="copyContent">
+          <span>Copyright 2007 - 2020 vancl.com All Rights Reserved京ICP备08000757号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</span> <br>
+          <span>凡客诚品（北京）科技有限公司</span>
+        </div>
+        <div class="copyLogo">
+          <span class="logo1"></span>
+          <span class="logo2"></span>
+          <span class="logo3"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+
+
+<script src="../script/jquery-1.8.3.js"></script>
+<script src="../script/goodsDetail.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+#wrapper{width: 980px;margin: 0 auto;}
+
+.topLogin{width: 980px;height: 39px;margin: 0 auto;padding-top: 15px;border-bottom: 1px solid #333;}
+// .topLogin .logo{float: left;}
+.topLogin .logo img{width: 311px;height: 39px;}
+.welcome{width: 300px;height: 31px;color: #666;line-height: 31px;float: left}
+.topLogin-conR{float: right;}
+.welcome span{cursor: text;color: #808080}
+.welcome span:nth-of-type(1){margin: 0 6px 0 0;}
+.welcome span:nth-of-type(2){margin: 0 4px 0 4px;}
+.welcome a{cursor: pointer;color: #a10000}
+.welcome span:nth-of-type(2){line-height: 31px;color: #808080;}
+.order{float: left;cursor: pointer;line-height: 31px;margin-left: 15px;}
+.order a{color: #333;margin-left: 18px;}
+
+.location{width: 540px;height: 28px;margin: 10px 0 0 0;background: url('../image/loactionBg.gif') 0 0;}
+.location em{color: #fff;float: left;font-weight: bold;line-height: 28px;text-align: center;width: 176px;}
+.location span{color: #666;float: left;font-weight: bold;line-height: 28px;
+text-align: center;width: 176px;}
+
+.content{width: 980px;margin: 30px 0; overflow: hidden;}
+.content .cartTop{width: 935px;height: 30px;color: #333;overflow: hidden;padding-left: 45px;background: url(../image/cartXuebi.gif) no-repeat -460px 0;}
+.content .cartTop h2{float: left;line-height: 36px;font-size: 18px;font-weight: bold;}
+.content .tip{margin-top: 6px;color: #656565;line-height: 20px;font-size: 14px;}
+.content .tip span:nth-child(1){color: #a10000;}
+
+
+.cartProduct{margin-top: 10px;}
+.cartProduct table{width: 980px;color: #333;border: 1px solid #DCDFE4;border-collapse: separate;}
+.cartProduct table td.photo{width: 90px;}
+.cartProduct table td img{border: 1px solid #C8C8C8;}
+.cartProduct thead{background-color: #eee;}
+.cartProduct thead tr{width: 980px;}
+.cartProduct th{border-top: 1px solid #DCDFE4;border-bottom: 1px solid #B7B7B7;line-height: 38px;}
+.cartProduct th,.cartProduct td{text-align: center;vertical-align: middle;}
+.cartProduct thead .image{width: 60px;}
+.cartProduct thead .th2{width: 70px;}
+.cartProduct thead .theadAll{margin: 0 10px 0 0;width: 13px;height: 13px;}
+.cartProduct thead span{margin-right: 1px;}
+.cartProduct tbody .white-space{background-color: white;height: 21px;}
+.cartProduct tbody tr{background-color: #fff;}
+// 购物车复选框选中样式
+.cartProduct tbody tr.selected{background: #F8F8F8;}
+.cartProduct tbody .selected .white-space-w{width: 16px;background-color: #fff;}
+.cartProduct tbody .choose{padding-left: 20px;}
+
+.cartProduct tbody .goodsInfo{width: 337px;}
+.cartProduct tbody .num{width: 100px;}
+.cartProduct tbody .num div{margin-left: 27px;}
+.cartProduct tbody .num input{margin: 0 4px;width: 30px;height: 18px;border: 1px solid #D8D8D8;float: left;text-align: center;}
+.cartProduct tbody .num .decrease{float: left;}
+.cartProduct tbody .num .increase{float: left;}
+
+.summary{padding: 12px 10px 10px 0;background: #FFFEF5;border: 1px solid #EBE5BB;line-height: 25px;width: 968px;position: relative;color: #333;margin-top: 14px; overflow: hidden;}
+.summary em,.summary .total a{color: #a10000;font-weight: bold;}
+.summary .bar{padding: 14px 42px 0 13px;text-align: left;}
+.summary .bar .del{margin-left: 25px;color: #333;}
+.summary .bar .carriage{margin-left: 42px;}
+.summary .bar span{margin-left: 42px;}
+.summary .total{float: left;padding: 20px 10px 10px 13px;font-size: 12px;}
+.summary .total a{margin-left: 10px;text-decoration: underline;font-weight: normal;}
+.summary .total span em{font-size: 24px;}
+.summary .calculate{padding: 0 0 15px 0;float: right;}
+.summary .calculate .continueBuy{color: #666;height: 37px;line-height: 37px;margin-left: 10px;font-size: 14px;text-align: center;width: 122px;background: url('../image/cartXuebi.gif') no-repeat -160px 0;padding: 10px 22px;}
+.summary .calculate .goPay{color: #fff;height: 50px;line-height: 50px;margin-left: 10px;width: 110px;background: url('../image/cartXuebi.gif') no-repeat 0 0;font-size: 20px;padding: 13px 21px 18px 50px;}
+
+
+.bottom{width: 980px;font: 100 12px "宋体";color: #999999;margin: 0 auto;padding-top: 50px;}
+.bottom p{margin: 0 0 20px 0;text-align: center;}
+.bottom .footer{margin-bottom: 25px;text-align: center;}
+.bottom .footer a,.bottom .footer span{margin-right: 13px;}
+.bottom .footer .bottom1{background: url(../image/loginXuebi.png) no-repeat scroll 0 -400px transparent;display: inline-block;width: 114px;height: 46px;}
+.bottom .footer .bottom2{background: url(../image/loginXuebi.png) no-repeat scroll 0 -448px transparent;display: inline-block;width: 156px;height: 46px;}
+.bottom .footer .bottom3{background: url(../image/loginXuebi.png) no-repeat scroll 0 -494px transparent;display: inline-block;width: 96px;height: 46px;}
+.bottom .footer .bottom4{background: url(../image/loginXuebi.png) no-repeat scroll -95px -494px transparent;display: inline-block;width: 113px;height: 46px;}

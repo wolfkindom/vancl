@@ -1,0 +1,1108 @@
+@charset "UTF-8";
+.navsContainer {
+  height: 52px;
+  margin: 0;
+  padding: 2px 0 0 0;
+  background: #fff;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  display: block; }
+  .navsContainer .navItem {
+    height: 50px;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #e5e6e6; }
+    .navsContainer .navItem .leftNav {
+      height: 46px;
+      line-height: 46px;
+      font-size: 18px;
+      margin: 0 20px;
+      float: left; }
+    .navsContainer .navItem .rightNav {
+      width: 380px;
+      height: 46px;
+      float: right;
+      position: relative;
+      cursor: pointer; }
+      .navsContainer .navItem .rightNav .right1 {
+        width: 200px;
+        height: 35px;
+        float: left;
+        color: #808080;
+        font-size: 14px;
+        position: absolute;
+        right: 190px;
+        bottom: 0px; }
+      .navsContainer .navItem .rightNav .right2 {
+        width: 155px;
+        height: 30px;
+        float: left;
+        position: absolute;
+        right: 30px;
+        bottom: 20%;
+        background: url(../image/vanclsprite.png) -152px -1084px; }
+
+#container {
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 520px;
+  box-sizing: border-box;
+  position: relative; }
+  #container header {
+    width: 100%;
+    height: 250px;
+    /* 头部栏 */
+    /* 搜索栏 */
+    /* 导航栏 */ }
+    #container header #title {
+      width: 100%;
+      height: 31px;
+      background: #f7f7f7; }
+      #container header #title .tit-main {
+        width: 1200px;
+        height: 31px;
+        line-height: 32px;
+        margin: 0 auto;
+        background: #f7f7f7; }
+        #container header #title .tit-main .content {
+          float: right; }
+        #container header #title .tit-main span {
+          font-size: 12px;
+          float: left;
+          color: #808080;
+          margin-right: 15px;
+          cursor: pointer; }
+        #container header #title .tit-main span:hover {
+          color: red; }
+        #container header #title .tit-main .notice {
+          text-indent: 30px;
+          background: url(../image/notice.png) no-repeat left 6px; }
+        #container header #title .tit-main .wechat {
+          width: 20px;
+          height: 25px;
+          float: right;
+          background: url(../image/w1.jpg) no-repeat left 6px; }
+        #container header #title .tit-main .qrcode {
+          position: absolute;
+          width: 128px;
+          height: 149px;
+          right: 180px;
+          top: 30px;
+          border: 1px solid #e5e5e5;
+          overflow: hidden;
+          display: none;
+          z-index: 999; }
+        #container header #title .tit-main .weibo {
+          width: 20px;
+          height: 25px;
+          float: right;
+          background: url(../image/w2.jpg) no-repeat left 6px; }
+    #container header #search {
+      width: 100%;
+      height: 62px;
+      margin-top: 10px; }
+      #container header #search .srh-main {
+        width: 1200px;
+        height: 58px;
+        margin: 0 auto; }
+        #container header #search .srh-main .content {
+          width: 470px;
+          padding-top: 4px;
+          float: right; }
+          #container header #search .srh-main .content .srh-btn {
+            float: right;
+            margin-top: 10px;
+            overflow: hidden;
+            position: relative; }
+            #container header #search .srh-main .content .srh-btn input {
+              font-size: 12px;
+              width: 255px;
+              height: 27px;
+              float: left;
+              border: 2px solid #c9caca; }
+            #container header #search .srh-main .content .srh-btn .seek {
+              width: 50px;
+              height: 30px;
+              float: left;
+              color: white;
+              background: #C51818;
+              border: none;
+              cursor: pointer; }
+            #container header #search .srh-main .content .srh-btn .shopCart {
+              width: 108px;
+              height: 30px;
+              float: left;
+              margin: 2px 0 0 25px;
+              padding-left: 30px;
+              color: white;
+              border: none;
+              background: url(../image/xuebi.png) no-repeat -152px 0;
+              cursor: pointer; }
+          #container header #search .srh-main .content .hot-srh {
+            width: 440px;
+            height: 30px;
+            line-height: 30px;
+            float: right; }
+            #container header #search .srh-main .content .hot-srh ul {
+              width: 440px;
+              height: 30px; }
+              #container header #search .srh-main .content .hot-srh ul li {
+                height: 30px;
+                font-size: 12px;
+                margin-right: 12px;
+                float: left;
+                cursor: pointer; }
+              #container header #search .srh-main .content .hot-srh ul li:nth-child(1) {
+                margin-right: 2px; }
+          #container header #search .srh-main .content .cartGoods {
+            width: 315px;
+            height: 160px;
+            padding: 5px;
+            border: 1px solid #b81c22;
+            position: absolute;
+            top: 86px;
+            right: 159px;
+            background: #ffffff;
+            display: none;
+            border-top: none;
+            z-index: 999;
+            cursor: pointer; }
+            #container header #search .srh-main .content .cartGoods .content {
+              width: 300px;
+              height: 170px;
+              margin: 10px 10px 0; }
+              #container header #search .srh-main .content .cartGoods .content h3 {
+                font-size: 12px;
+                color: #727171;
+                margin: 0 0 0 5px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc; }
+              #container header #search .srh-main .content .cartGoods .content .goods-detail {
+                overflow: hidden;
+                margin: 15px 0 0 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc; }
+                #container header #search .srh-main .content .cartGoods .content .goods-detail img {
+                  float: left; }
+                #container header #search .srh-main .content .cartGoods .content .goods-detail div {
+                  font-size: 12px;
+                  margin-left: 10px;
+                  float: left; }
+                #container header #search .srh-main .content .cartGoods .content .goods-detail p {
+                  font-size: 12px;
+                  margin-left: 55px;
+                  float: left; }
+              #container header #search .srh-main .content .cartGoods .content .total {
+                overflow: hidden;
+                margin: 20px 0 0 10px; }
+                #container header #search .srh-main .content .cartGoods .content .total div {
+                  float: left;
+                  font-size: 12px; }
+                #container header #search .srh-main .content .cartGoods .content .total button {
+                  float: left;
+                  margin-left: 55px;
+                  padding: 5px 10px;
+                  background: red;
+                  border: none; }
+    #container header #nav .nav-main {
+      width: 1200px;
+      height: 60px;
+      padding-top: 50px;
+      margin: 0 auto; }
+      #container header #nav .nav-main a {
+        width: 185px;
+        height: 46px;
+        float: left;
+        background: url(../image/xuebi.png) no-repeat 0 -60px;
+        cursor: pointer; }
+      #container header #nav .nav-main .navList {
+        width: 1000px;
+        float: left;
+        text-align: center;
+        position: relative; }
+        #container header #nav .nav-main .navList > li {
+          width: 96px;
+          height: 30px;
+          line-height: 30px;
+          margin-top: 12px;
+          float: left;
+          border-right: 2px solid #ccc;
+          cursor: pointer; }
+          #container header #nav .nav-main .navList > li:nth-child(1) {
+            margin-left: 10px; }
+          #container header #nav .nav-main .navList > li:nth-child(2) {
+            background: url(../image/icon_hot.png) no-repeat 56px 0px; }
+          #container header #nav .nav-main .navList > li:nth-child(3) {
+            background: url(../image/icon_hot.png) no-repeat 63px 0px; }
+          #container header #nav .nav-main .navList > li:nth-child(6) {
+            background: url(../image/icon_hot.png) no-repeat 47px 0px; }
+        #container header #nav .nav-main .navList .fleece {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 107px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .business {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 205px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .relax {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 303px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .sweater {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 401px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .coat {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 499px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .knitwear {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 597px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .pants {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 695px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .shoe {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 793px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+        #container header #nav .nav-main .navList .furniture {
+          font-size: 14px;
+          width: 96px;
+          position: absolute;
+          left: 891px;
+          top: 44px;
+          border: 1px solid #ccc;
+          border-radius: 0px 0px 5px 5px;
+          display: block;
+          border-top: 6px solid red;
+          text-align: center;
+          display: none;
+          background: white;
+          z-index: 999; }
+  #container .wrap {
+    width: 100%; }
+    #container .wrap #detail .detail-main {
+      width: 1200px;
+      margin: 0 auto; }
+    #container .wrap #detail .catalog p {
+      margin-left: 20px;
+      height: 55px;
+      line-height: 60px;
+      font-size: 14px;
+      color: #333;
+      cursor: pointer; }
+    #container .wrap #detail .title {
+      height: 70px;
+      border-bottom: 1px solid #e5e6e6; }
+      #container .wrap #detail .title h3 {
+        height: 55px;
+        line-height: 55px;
+        float: left;
+        margin-left: 45px;
+        font-size: 24px;
+        color: black; }
+      #container .wrap #detail .title p {
+        height: 55px;
+        line-height: 55px;
+        float: right;
+        margin-right: 20px;
+        cursor: pointer;
+        color: #808080; }
+    #container .wrap #detail .content {
+      height: 500px;
+      border-bottom: 1px solid #999;
+      margin-top: 30px;
+      position: relative; }
+      #container .wrap #detail .content .options {
+        width: 72px;
+        height: 415px;
+        float: left;
+        border: 1px solid #000;
+        overflow: hidden;
+        border: none; }
+        #container .wrap #detail .content .options .upper {
+          height: 10px;
+          line-height: 10px;
+          background: url(../image/sprite0725.png) -3270px 0;
+          cursor: pointer; }
+        #container .wrap #detail .content .options ul {
+          border: none; }
+          #container .wrap #detail .content .options ul li {
+            margin-top: 11px;
+            border: 1px solid #B4B4B4;
+            width: 70px;
+            height: 70px; }
+          #container .wrap #detail .content .options ul .opt1 {
+            width: 68px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px 0px; }
+          #container .wrap #detail .content .options ul .opt2 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -70px; }
+          #container .wrap #detail .content .options ul .opt3 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -140px; }
+          #container .wrap #detail .content .options ul .opt4 {
+            width: 68px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -210px; }
+          #container .wrap #detail .content .options ul .opt5 {
+            width: 68px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -273px; }
+          #container .wrap #detail .content .options ul .opt6 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px 0px; }
+          #container .wrap #detail .content .options ul .opt7 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -70px; }
+          #container .wrap #detail .content .options ul .opt8 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -140px; }
+          #container .wrap #detail .content .options ul .opt9 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -210px; }
+          #container .wrap #detail .content .options ul .opt10 {
+            width: 70px;
+            height: 68px;
+            background: url(../image/optionList.jpg) no-repeat 0px -273px; }
+        #container .wrap #detail .content .options .under {
+          width: 70px;
+          height: 10px;
+          line-height: 10px;
+          background: url(../image/sprite0725.png) 0 -136px;
+          cursor: pointer;
+          position: absolute;
+          top: 424px;
+          left: 0px;
+          z-index: 999; }
+      #container .wrap #detail .content .pic {
+        width: 400px;
+        height: 400px;
+        margin: 10px 75px;
+        float: left;
+        border: 1px solid #000;
+        position: relative; }
+        #container .wrap #detail .content .pic .videoLogo {
+          position: absolute;
+          bottom: 5px;
+          left: 5px; }
+          #container .wrap #detail .content .pic .videoLogo img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer; }
+        #container .wrap #detail .content .pic .mask {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          cursor: crosshair;
+          opacity: 0.6;
+          background-color: #e6eaf3;
+          border: 1px solid White;
+          display: none; }
+      #container .wrap #detail .content .rightContent {
+        width: 566px;
+        height: 415px;
+        float: left;
+        border: 1px solid #000; }
+        #container .wrap #detail .content .rightContent .pricearea {
+          width: 561px;
+          height: 56px;
+          color: #b81c22; }
+          #container .wrap #detail .content .rightContent .pricearea .discount {
+            display: inline;
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 15px; }
+          #container .wrap #detail .content .rightContent .pricearea .price {
+            display: inline;
+            width: 170px;
+            height: 30px;
+            line-height: 30px; }
+            #container .wrap #detail .content .rightContent .pricearea .price strong {
+              font-size: 24px;
+              color: #A10000; }
+          #container .wrap #detail .content .rightContent .pricearea .recharge {
+            font-size: 12px;
+            display: inline;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 20px; }
+          #container .wrap #detail .content .rightContent .pricearea > span {
+            margin-left: 20px;
+            font-size: 12px;
+            width: 130px;
+            color: #fff;
+            background: #b81c22;
+            padding: 3px;
+            cursor: pointer; }
+        #container .wrap #detail .content .rightContent .selectArea {
+          width: 561px;
+          height: 260px;
+          padding: 20px 0 0 20px; }
+          #container .wrap #detail .content .rightContent .selectArea .color {
+            width: 100%;
+            height: 100px; }
+            #container .wrap #detail .content .rightContent .selectArea .color .colorTitle {
+              float: left; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorTitle span {
+                font-size: 12px;
+                height: 42px;
+                line-height: 42px; }
+            #container .wrap #detail .content .rightContent .selectArea .color .colorList {
+              float: left;
+              width: 500px;
+              height: 100px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul li {
+                margin: 0 5px 5px 0;
+                cursor: pointer;
+                border: 1px solid #999;
+                height: 36px;
+                float: left; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color1 {
+                width: 95px;
+                background: url(../image/colorList.jpg) no-repeat 0px 0px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color1 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 60px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color2 {
+                width: 115px;
+                background: url(../image/colorList.jpg) no-repeat 0px -36px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color2 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 50px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color3 {
+                width: 125px;
+                background: url(../image/colorList.jpg) no-repeat 0px -71px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color3 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 50px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color4 {
+                width: 97px;
+                background: url(../image/colorList.jpg) no-repeat 0px -108px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color4 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 60px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color5 {
+                width: 110px;
+                background: url(../image/colorList.jpg) no-repeat 0px -145px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color5 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 50px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color6 {
+                width: 97px;
+                background: url(../image/colorList.jpg) no-repeat 0px -180px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color6 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 60px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color7 {
+                width: 115px;
+                background: url(../image/colorList.jpg) no-repeat 0px -216px;
+                overflow: hidden; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color7 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 60px; }
+              #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color8 {
+                width: 103px;
+                background: url(../image/colorList.jpg) no-repeat 0px -252px; }
+                #container .wrap #detail .content .rightContent .selectArea .color .colorList ul .color8 p {
+                  height: 42px;
+                  line-height: 38px;
+                  font-size: 12px;
+                  padding-left: 60px; }
+          #container .wrap #detail .content .rightContent .selectArea .size {
+            width: 100%;
+            height: 32px; }
+            #container .wrap #detail .content .rightContent .selectArea .size .sizeTitle {
+              float: left; }
+              #container .wrap #detail .content .rightContent .selectArea .size .sizeTitle span {
+                font-size: 12px;
+                height: 38px;
+                line-height: 31px; }
+            #container .wrap #detail .content .rightContent .selectArea .size .sizeList {
+              float: left;
+              width: 300px; }
+              #container .wrap #detail .content .rightContent .selectArea .size .sizeList ul {
+                text-align: center; }
+                #container .wrap #detail .content .rightContent .selectArea .size .sizeList ul li {
+                  width: 50px;
+                  height: 26px;
+                  line-height: 26px;
+                  margin-left: 10px;
+                  border: 1px solid #eee;
+                  float: left;
+                  cursor: pointer; }
+          #container .wrap #detail .content .rightContent .selectArea .num {
+            height: 35px;
+            overflow: hidden; }
+            #container .wrap #detail .content .rightContent .selectArea .num .numTitle {
+              width: 40px;
+              float: left; }
+              #container .wrap #detail .content .rightContent .selectArea .num .numTitle span {
+                font-size: 12px;
+                height: 35px;
+                line-height: 35px; }
+            #container .wrap #detail .content .rightContent .selectArea .num .numList {
+              float: left; }
+              #container .wrap #detail .content .rightContent .selectArea .num .numList select {
+                width: 50px;
+                height: 20px;
+                margin: 7px 0 0 10px; }
+          #container .wrap #detail .content .rightContent .selectArea .checked {
+            width: 100%;
+            height: 30px;
+            font-size: 12px;
+            overflow: hidden; }
+            #container .wrap #detail .content .rightContent .selectArea .checked span {
+              height: 35px;
+              line-height: 35px;
+              float: left; }
+            #container .wrap #detail .content .rightContent .selectArea .checked p {
+              float: left;
+              color: #a10000;
+              margin: 8px 0 0 27px;
+              font-weight: bold; }
+          #container .wrap #detail .content .rightContent .selectArea .btn {
+            width: 100%;
+            height: 43px;
+            line-height: 43px; }
+            #container .wrap #detail .content .rightContent .selectArea .btn button {
+              width: 160px;
+              height: 33px;
+              margin-right: 10px;
+              font-size: 14px;
+              cursor: pointer; }
+            #container .wrap #detail .content .rightContent .selectArea .btn .buyNow {
+              color: #A50309;
+              margin-left: 40px;
+              width: 136px;
+              background: #F7ABAF;
+              border: solid 1px #b71b21; }
+            #container .wrap #detail .content .rightContent .selectArea .btn .addCart {
+              border: solid 1px #b71b21;
+              background: url(../image/vanclsprite.png) -548px -287px; }
+        #container .wrap #detail .content .rightContent .promotion {
+          width: 561px;
+          height: 67px;
+          position: relative;
+          padding-top: 20px; }
+          #container .wrap #detail .content .rightContent .promotion h4 {
+            font-size: 14px;
+            height: 14px;
+            line-height: 14px;
+            text-align: center;
+            background: #ffffff;
+            color: #3e3e3e;
+            position: absolute;
+            left: 177px;
+            top: -4px;
+            padding: 0 8px; }
+            #container .wrap #detail .content .rightContent .promotion h4:before {
+              content: "";
+              width: 145px;
+              height: 1px;
+              background-color: #c5c0c0;
+              position: absolute;
+              bottom: 50%;
+              z-index: 1;
+              left: -143px; }
+            #container .wrap #detail .content .rightContent .promotion h4:after {
+              content: "";
+              width: 127px;
+              height: 1px;
+              background-color: #c5c0c0;
+              position: absolute;
+              bottom: 50%;
+              z-index: 1;
+              left: 70px; }
+          #container .wrap #detail .content .rightContent .promotion .promo1 {
+            height: 24px;
+            font-size: 12px;
+            line-height: 24px;
+            margin: 0px 0 0 20px; }
+            #container .wrap #detail .content .rightContent .promotion .promo1 ul li {
+              float: left;
+              padding: 0 5px;
+              background: #b81c22;
+              margin: 0px 7px;
+              color: #fff; }
+            #container .wrap #detail .content .rightContent .promotion .promo1 ul .over199 {
+              float: left;
+              margin-left: 15px; }
+          #container .wrap #detail .content .rightContent .promotion .promo2 {
+            height: 16px;
+            line-height: 24px;
+            font-size: 12px;
+            margin: 0px 0 0 20px; }
+            #container .wrap #detail .content .rightContent .promotion .promo2 ul li {
+              float: left;
+              padding: 0 3px;
+              background: #b81c22;
+              margin: 3px 7px;
+              color: #fff;
+              cursor: pointer; }
+      #container .wrap #detail .content .bigPic {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        left: 590px;
+        top: 10px;
+        z-index: 999;
+        overflow: hidden;
+        display: none; }
+        #container .wrap #detail .content .bigPic img {
+          width: 800px;
+          height: 800px;
+          position: absolute;
+          left: 0;
+          top: 0; }
+    #container .wrap #detail .introduce {
+      margin-top: 30px; }
+      #container .wrap #detail .introduce ul li {
+        height: 30px;
+        font-size: 12px; }
+        #container .wrap #detail .introduce ul li:nth-child(1) {
+          color: #999;
+          font-weight: bold; }
+        #container .wrap #detail .introduce ul li:nth-child(2) {
+          padding: 0 9px;
+          line-height: 30px;
+          background: #eee;
+          color: #a10000;
+          margin-bottom: 20px; }
+        #container .wrap #detail .introduce ul li:nth-child(3) {
+          color: #999;
+          font-weight: bold; }
+        #container .wrap #detail .introduce ul li:nth-child(4) {
+          color: #999; }
+    #container .wrap #detail .imgList img {
+      border: none;
+      display: block; }
+    #container .wrap #detail #comment {
+      margin: 0 auto;
+      width: 1200px;
+      overflow: hidden;
+      margin-bottom: 50px; }
+      #container .wrap #detail #comment .recommend {
+        float: left;
+        width: 190px;
+        margin-right: 27px;
+        border: 1px solid #eee; }
+        #container .wrap #detail #comment .recommend h4 {
+          width: 135px;
+          height: 41px;
+          font-size: 12px;
+          height: 40px;
+          line-height: 40px;
+          padding-left: 25px; }
+        #container .wrap #detail #comment .recommend ul {
+          text-align: center; }
+          #container .wrap #detail #comment .recommend ul li {
+            width: 160px;
+            margin: 0 auto;
+            font-size: 12px;
+            margin-bottom: 10px; }
+            #container .wrap #detail #comment .recommend ul li img {
+              width: 160px;
+              height: 160px;
+              cursor: pointer; }
+            #container .wrap #detail #comment .recommend ul li h4 {
+              text-align: center;
+              width: 120px;
+              height: 20px;
+              line-height: 20px;
+              color: #808080; }
+            #container .wrap #detail #comment .recommend ul li p {
+              width: 60px;
+              height: 22px;
+              line-height: 22px;
+              margin: 6px auto;
+              color: #a10000;
+              font-weight: bold; }
+      #container .wrap #detail #comment .contentArea {
+        float: left;
+        width: 978px;
+        height: 1000px;
+        border: 1px solid #eee;
+        overflow: hidden; }
+        #container .wrap #detail #comment .contentArea .new {
+          width: 980px;
+          height: 41px;
+          line-height: 41px;
+          color: #333;
+          font-size: 12px;
+          padding-left: 25px;
+          border: 1px solid #eee; }
+          #container .wrap #detail #comment .contentArea .new h4, #container .wrap #detail #comment .contentArea .new .input {
+            float: left;
+            margin-right: 10px; }
+          #container .wrap #detail #comment .contentArea .new p {
+            width: 120px;
+            height: 32px;
+            line-height: 32px;
+            margin-top: 5px;
+            float: right;
+            margin-right: 70px;
+            text-align: center;
+            padding: 0px 16px;
+            background: #d46a6a;
+            color: #fff;
+            cursor: pointer; }
+        #container .wrap #detail #comment .contentArea .detail {
+          width: 980px;
+          height: 165px; }
+          #container .wrap #detail #comment .contentArea .detail .wrap {
+            width: 916px;
+            height: 165px;
+            margin: 0 auto; }
+            #container .wrap #detail #comment .contentArea .detail .wrap .content1 {
+              width: 716px;
+              height: 115px;
+              float: left;
+              color: #333;
+              padding: 25px 0;
+              border-right: 1px solid #eee;
+              border-bottom: 1px solid #eee; }
+              #container .wrap #detail #comment .contentArea .detail .wrap .content1 .left {
+                float: left; }
+                #container .wrap #detail #comment .contentArea .detail .wrap .content1 .left p {
+                  width: 510px;
+                  height: 20px;
+                  line-height: 20px;
+                  font-size: 12px;
+                  color: #333;
+                  margin-bottom: 20px; }
+                #container .wrap #detail #comment .contentArea .detail .wrap .content1 .left span {
+                  width: 510px;
+                  height: 20px;
+                  line-height: 20px;
+                  font-size: 12px;
+                  color: #b4b4b4; }
+              #container .wrap #detail #comment .contentArea .detail .wrap .content1 .right {
+                float: right; }
+                #container .wrap #detail #comment .contentArea .detail .wrap .content1 .right span {
+                  display: block;
+                  width: 130px;
+                  height: 20px;
+                  line-height: 20px;
+                  font-size: 12px;
+                  color: #333; }
+                #container .wrap #detail #comment .contentArea .detail .wrap .content1 .right .size {
+                  padding-top: 20px; }
+            #container .wrap #detail #comment .contentArea .detail .wrap .userInfo1 {
+              width: 157px;
+              height: 165px;
+              font-size: 12px;
+              float: left;
+              padding-left: 20px;
+              border-bottom: 1px solid #eee;
+              cursor: pointer; }
+              #container .wrap #detail #comment .contentArea .detail .wrap .userInfo1 span {
+                display: block;
+                width: 70px;
+                margin: 50px 0 0 34px; }
+              #container .wrap #detail #comment .contentArea .detail .wrap .userInfo1 p {
+                text-align: center;
+                color: #fff;
+                background: #FFE53A;
+                width: 50px;
+                margin: 10px auto 0; }
+      #container .wrap #detail #comment .ask {
+        width: 980px;
+        float: right;
+        margin-top: 40px;
+        border: 1px solid #eee; }
+        #container .wrap #detail #comment .ask .new {
+          width: 980px;
+          height: 41px;
+          line-height: 41px;
+          color: #333;
+          font-size: 12px;
+          padding-left: 25px;
+          border: 1px solid #eee; }
+          #container .wrap #detail #comment .ask .new h4 {
+            float: left;
+            margin-right: 10px; }
+          #container .wrap #detail #comment .ask .new p {
+            width: 120px;
+            height: 32px;
+            line-height: 32px;
+            margin-top: 5px;
+            float: right;
+            margin-right: 70px;
+            text-align: center;
+            padding: 0px 16px;
+            background: #d46a6a;
+            color: #fff;
+            cursor: pointer; }
+        #container .wrap #detail #comment .ask .detail ul li {
+          width: 918px;
+          height: 90px;
+          margin-bottom: 20px;
+          padding: 0 0 20px 20px;
+          font-size: 12px;
+          border-bottom: 1px solid #eee; }
+          #container .wrap #detail #comment .ask .detail ul li .question {
+            width: 918px;
+            height: 34px;
+            line-height: 34px;
+            margin: 30px 0; }
+            #container .wrap #detail #comment .ask .detail ul li .question .left {
+              float: left; }
+              #container .wrap #detail #comment .ask .detail ul li .question .left .q {
+                margin: 7px 10px 0 0;
+                width: 20px;
+                height: 20px;
+                font-size: 16px;
+                background-color: #a10000;
+                display: block;
+                text-align: center;
+                line-height: 20px;
+                color: #fff;
+                float: left; }
+            #container .wrap #detail #comment .ask .detail ul li .question .right {
+              float: right; }
+          #container .wrap #detail #comment .ask .detail ul li .answer {
+            width: 918px;
+            height: 30px;
+            line-height: 30px;
+            color: #7c7b7b; }
+            #container .wrap #detail #comment .ask .detail ul li .answer .a {
+              margin: 4px 10px 0 0;
+              width: 20px;
+              height: 20px;
+              font-size: 16px;
+              background-color: #d46a6a;
+              display: block;
+              text-align: center;
+              line-height: 20px;
+              color: #fff;
+              float: left; }
+  #container footer {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /* 帮助中心 */
+    /* 版权栏 */ }
+    #container footer #help .help-main {
+      width: 1200px;
+      height: 282px;
+      margin: 0px auto;
+      border: 1px solid #eee; }
+      #container footer #help .help-main .helpTop {
+        width: 1000px;
+        height: 182px;
+        margin: 0px auto;
+        font-size: 12px; }
+        #container footer #help .help-main .helpTop img {
+          margin-left: -50px; }
+        #container footer #help .help-main .helpTop .helpTop1 {
+          width: 300px;
+          height: 110px;
+          float: left;
+          margin: 20px 0 0 40px;
+          text-align: center;
+          padding-top: 30px;
+          border-right: 1px solid #e0e0e1; }
+          #container footer #help .help-main .helpTop .helpTop1 button {
+            background: #b81c22;
+            color: #ffffff;
+            border: none;
+            margin: 15px 50px 0 0;
+            padding: 5px 12px;
+            cursor: pointer; }
+        #container footer #help .help-main .helpTop .helpTop2 {
+          width: 300px;
+          height: 110px;
+          float: left;
+          margin: 20px 0 0 10px;
+          text-align: center;
+          padding-top: 30px;
+          border-right: 1px solid #e0e0e1; }
+          #container footer #help .help-main .helpTop .helpTop2 img {
+            cursor: pointer;
+            margin-bottom: 10px; }
+          #container footer #help .help-main .helpTop .helpTop2 span {
+            margin-right: 50px;
+            height: 20px;
+            line-height: 20px; }
+        #container footer #help .help-main .helpTop .helpTop3 {
+          width: 300px;
+          height: 132px;
+          float: left;
+          margin-left: 10px;
+          text-align: center;
+          padding-top: 30px; }
+          #container footer #help .help-main .helpTop .helpTop3 img {
+            width: 86px;
+            height: 86px;
+            margin-left: 105px;
+            cursor: pointer; }
+          #container footer #help .help-main .helpTop .helpTop3 span {
+            margin-left: 105px;
+            display: block;
+            height: 30px;
+            line-height: 30px; }
+      #container footer #help .help-main .helpBottom {
+        width: 1000px;
+        height: 50px;
+        margin: 0px auto;
+        background: #f8f8f8; }
+        #container footer #help .help-main .helpBottom li {
+          font-size: 14px;
+          color: #323232;
+          text-align: center;
+          line-height: 30px;
+          height: 30px;
+          float: left;
+          margin-top: 12px;
+          padding: 0px 50px;
+          border-right: 1px solid #dadadb;
+          cursor: pointer; }
+          #container footer #help .help-main .helpBottom li:nth-child(6) {
+            border-right: none; }
+    #container footer #copyright {
+      overflow: hidden; }
+      #container footer #copyright .copy-main {
+        width: 1200px;
+        height: 136px;
+        margin: 50px auto;
+        text-align: center; }
+        #container footer #copyright .copy-main .copyContent {
+          width: 1200px;
+          height: 85px;
+          overflow: hidden;
+          padding-top: 10px;
+          border-top: 1px solid black; }
+          #container footer #copyright .copy-main .copyContent span {
+            font-size: 12px;
+            color: #333; }
+        #container footer #copyright .copy-main .copyLogo span {
+          margin-right: 10px;
+          cursor: pointer; }
+        #container footer #copyright .copy-main .copyLogo .logo1 {
+          width: 165px;
+          height: 45px;
+          margin-left: 450px;
+          float: left;
+          background: url(../image/copyright.png) no-repeat 0px -629px; }
+        #container footer #copyright .copy-main .copyLogo .logo2 {
+          width: 101px;
+          height: 42px;
+          float: left;
+          background: url(../image/copyright.png) no-repeat -97px -675px; }
+        #container footer #copyright .copy-main .copyLogo .logo3 {
+          width: 42px;
+          height: 42px;
+          float: left;
+          background: url(../image/copyright.png) no-repeat -202px -675px; }

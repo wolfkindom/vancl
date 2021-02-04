@@ -16,6 +16,7 @@ let del = require('del')//删除文件
 //   ...
 // }
 
+
 // 删除dist目录
 task('delDist',async ()=>{
   await del('./dist')

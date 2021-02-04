@@ -3,6 +3,7 @@ let {task,src,dest,watch,series,parallel} = require('gulp')
 let load = require('gulp-load-plugins')()
 let del = require('del')//删除文件
 
+
 // 删除dist目录
 task('delDist',async ()=>{
   await del('./dist')

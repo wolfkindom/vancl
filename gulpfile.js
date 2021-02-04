@@ -2,6 +2,7 @@
 // console.log( process )//nodejs中的进程对象
 // console.log( process.argv[2] )
 
+
 let mode = process.argv[2] // 'start'  'build'
 switch(mode){
   case 'start':

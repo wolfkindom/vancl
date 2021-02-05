@@ -18,6 +18,38 @@
 
 })();
 
+
+// 右侧悬浮栏
+(function(){
+  $rightFloat = $('.rightFloat')
+  $tab = $('.tab')
+  // 保存当前坐标状态
+  var $flag = 0
+  
+  $tab.click( ()=>{
+    var leftValue = $rightFloat.offset().left
+    // 判断已改变坐标
+    if( $flag != 0 ){
+      $rightFloat.animate( {right: '-276px'}, 'slow')
+      $flag = 0           
+    }else if( leftValue = '1595px'){  // 悬浮栏隐藏状态，执行以下函数
+      $rightFloat.animate( {right: '0px'}, 'slow' )
+      $flag = 1
+    }
+    // 给外面返回最新坐标
+    return $flag
+  });
+
+  // 简易实现：enter+click
+  // $tab.mouseenter( ()=>{
+  //     $rightFloat.animate( {right: '0px'}, 'slow' )    
+  // });
+  // $tab.click( ()=>{
+  //     $rightFloat.animate( {right: '-276px'}, 'slow')   
+  // });
+
+})();
+
 // 微信hover
 (function(){
   $wechat = $('.wechat')
@@ -32,14 +64,17 @@
   )
 })();
 
+
 // 购物车hover
 (function(){
   $shopCart = $('.shopCart')
   $cartGoods = $('.cartGoods')
-  $shopCart.hover(
+  $shopCart.mouseenter(
     function () {
       $cartGoods.show();
-    },
+    }
+  )
+  $shopCart.mouseleave(
     function () {
       $cartGoods.hide();
     }

@@ -7,7 +7,7 @@
   background: #fff;
   position: sticky;
   top: -1px;
-  z-index: 999;
+  z-index: 9999;
   display: block;
   .navItem{
     height: 50px;
@@ -50,8 +50,127 @@
   }  
 }
 
-
-
+// 右侧悬浮栏
+.rightFloat{
+  position: fixed;
+  right: -276px;
+  top: 0;
+  width: 0px;
+  height: 100vh;
+  z-index: 9999;
+  .container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-right: 6px solid #7a6e6e;
+    width: 0px;
+    height: 100%;
+    .wrap{
+      position: absolute;
+      width: 270px;
+      height: 100%;
+      background: #eceaea;
+      right: 0px;
+      z-index: 9999;
+      h4{
+        color: #5e5050;
+        height: 40px;
+        line-height: 40px;
+        font: 16px/40px;
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .coupon{
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+        ul{
+          li{
+            height: 103px;
+            background: #fff;
+            display: flex;
+            margin-bottom: 10px;
+            .left{
+              display: flex;
+              flex: 1;
+              flex-flow: column nowrap;
+              padding: 10px;
+              div{
+                display: flex;
+              }
+              .left1{
+                color: #A10000;
+                margin-bottom: 10px;
+                .dollor{
+                  margin-right: 5px;
+                }
+                .twenty{
+                  font-size: 28px;
+                  font-weight: 700;
+                  margin-top: -5px;
+                  margin-right: 10px;
+                }
+                .validDate{
+                  display: flex;
+                  align-items: center;
+                }
+              }
+              .left2{
+                font-size: 12px;
+                color: #777777;
+                margin-bottom: 5px;
+              }
+              .left3{
+                color: #999;
+                font-size: 12px;
+              }
+            }
+            .right{
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              width: 32px;
+              background: #A10000;
+              color: #fff;
+              cursor: pointer;
+              span{
+                width: 12px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tab{
+      position: absolute;
+      width: 35px;
+      left: -304px;
+      top: calc(50% - 35px);
+      .wrap{
+        width: 35px;
+        height: 35px;
+        border-radius: 3px 0 0 3px;
+        position: relative;
+        background: #7a6e6e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover{
+          background: #CC2E2E;
+        }
+        img{
+          width: 18px;
+        }
+      }
+      
+    }
+  }
+}
 
 
 // 大容器

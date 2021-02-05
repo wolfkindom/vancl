@@ -6,7 +6,7 @@
   background: #fff;
   position: sticky;
   top: -1px;
-  z-index: 999;
+  z-index: 9999;
   display: block; }
   .navsContainer .navItem {
     height: 50px;
@@ -42,6 +42,104 @@
         right: 30px;
         bottom: 20%;
         background: url(../image/vanclsprite.png) -152px -1084px; }
+
+.rightFloat {
+  position: fixed;
+  right: -276px;
+  top: 0;
+  width: 0px;
+  height: 100vh;
+  z-index: 9999; }
+  .rightFloat .container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-right: 6px solid #7a6e6e;
+    width: 0px;
+    height: 100%; }
+    .rightFloat .container .wrap {
+      position: absolute;
+      width: 270px;
+      height: 100%;
+      background: #eceaea;
+      right: 0px;
+      z-index: 9999; }
+      .rightFloat .container .wrap h4 {
+        color: #5e5050;
+        height: 40px;
+        line-height: 40px;
+        font: 16px/40px;
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      .rightFloat .container .wrap .coupon {
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box; }
+        .rightFloat .container .wrap .coupon ul li {
+          height: 103px;
+          background: #fff;
+          display: flex;
+          margin-bottom: 10px; }
+          .rightFloat .container .wrap .coupon ul li .left {
+            display: flex;
+            flex: 1;
+            flex-flow: column nowrap;
+            padding: 10px; }
+            .rightFloat .container .wrap .coupon ul li .left div {
+              display: flex; }
+            .rightFloat .container .wrap .coupon ul li .left .left1 {
+              color: #A10000;
+              margin-bottom: 10px; }
+              .rightFloat .container .wrap .coupon ul li .left .left1 .dollor {
+                margin-right: 5px; }
+              .rightFloat .container .wrap .coupon ul li .left .left1 .twenty {
+                font-size: 28px;
+                font-weight: 700;
+                margin-top: -5px;
+                margin-right: 10px; }
+              .rightFloat .container .wrap .coupon ul li .left .left1 .validDate {
+                display: flex;
+                align-items: center; }
+            .rightFloat .container .wrap .coupon ul li .left .left2 {
+              font-size: 12px;
+              color: #777777;
+              margin-bottom: 5px; }
+            .rightFloat .container .wrap .coupon ul li .left .left3 {
+              color: #999;
+              font-size: 12px; }
+          .rightFloat .container .wrap .coupon ul li .right {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            background: #A10000;
+            color: #fff;
+            cursor: pointer; }
+            .rightFloat .container .wrap .coupon ul li .right span {
+              width: 12px;
+              font-size: 12px; }
+    .rightFloat .container .tab {
+      position: absolute;
+      width: 35px;
+      left: -304px;
+      top: calc(50% - 35px); }
+      .rightFloat .container .tab .wrap {
+        width: 35px;
+        height: 35px;
+        border-radius: 3px 0 0 3px;
+        position: relative;
+        background: #7a6e6e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; }
+        .rightFloat .container .tab .wrap:hover {
+          background: #CC2E2E; }
+        .rightFloat .container .tab .wrap img {
+          width: 18px; }
 
 #container {
   width: 100%;

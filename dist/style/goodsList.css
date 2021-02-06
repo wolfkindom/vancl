@@ -322,50 +322,55 @@
   height: auto;
   margin: 0 auto;
   overflow: hidden; }
+  .goods-con .list .listItem {
+    background: #FFF;
+    margin: 20px 15px 45px 20px;
+    width: 260px;
+    height: 260px;
+    padding: 0px;
+    float: left; }
+    .goods-con .list .listItem img {
+      width: 224px;
+      height: 224px;
+      margin: 0 0 0 20px; }
+    .goods-con .list .listItem h3 {
+      height: 17px;
+      line-height: 17px;
+      text-align: center;
+      font-weight: bold;
+      background: #ffffff;
+      margin: 5px 0px 7px 0px;
+      overflow: hidden;
+      font-size: 14px; }
+      .goods-con .list .listItem h3 a {
+        color: #676767; }
+    .goods-con .list .listItem .itemPrice {
+      text-align: center; }
+      .goods-con .list .listItem .itemPrice span:nth-child(1) {
+        font-size: 13px;
+        color: #b80001;
+        line-height: 25px;
+        text-align: center;
+        text-decoration: line-through; }
+      .goods-con .list .listItem .itemPrice span:nth-child(2) {
+        font-weight: bold;
+        margin: 0 0 0 10px;
+        color: #b80001;
+        line-height: 25px;
+        text-align: center;
+        font-size: 13px; }
 
-.list .listItem {
-  background: #FFF;
-  margin: 20px 15px 45px 20px;
-  width: 260px;
-  height: 260px;
-  padding: 0px;
-  float: left; }
-
-.list .listItem img {
-  width: 224px;
-  height: 224px;
-  margin: 0 0 0 20px; }
-
-.list .listItem h3 {
-  height: 17px;
-  line-height: 17px;
-  text-align: center;
-  font-weight: bold;
-  background: #ffffff;
-  margin: 5px 0px 7px 0px;
-  overflow: hidden;
-  font-size: 14px; }
-
-.list .listItem h3 a {
-  color: #676767; }
-
-.list .listItem .itemPrice {
-  text-align: center; }
-
-.list .listItem .itemPrice span:nth-child(1) {
-  font-size: 13px;
-  color: #b80001;
-  line-height: 25px;
-  text-align: center;
-  text-decoration: line-through; }
-
-.list .listItem .itemPrice span:nth-child(2) {
-  font-weight: bold;
-  margin: 0 0 0 10px;
-  color: #b80001;
-  line-height: 25px;
-  text-align: center;
-  font-size: 13px; }
+/* 回到顶部  */
+.toTop {
+  width: 25px;
+  height: 90px;
+  display: none;
+  background: url(../image/backtotop.png) no-repeat;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  z-index: 9999;
+  cursor: pointer; }
 
 /* 帮助中心 */
 #help .help-main {

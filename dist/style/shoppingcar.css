@@ -186,6 +186,9 @@
 .cartProduct tbody .num .increase {
   float: left; }
 
+.cartProduct tbody .operate {
+  cursor: pointer; }
+
 .summary {
   padding: 12px 10px 10px 0;
   background: #FFFEF5;

@@ -35,7 +35,7 @@
     // 给外面返回最新坐标
     return $flag
   });
-  // 简易实现：enter+click
+  // enter+click 实现：
   // $tab.mouseenter( ()=>{
   //     $rightFloat.animate( {right: '0px'}, 'slow' )    
   // });
@@ -46,8 +46,7 @@
 
 
 // 微信hover
-(function(){
-
+(function wechat(){
   $('#header').on('mouseenter', '.wechat', function(){        
     $qrcode = $('.qrcode')
     $qrcode.show(); 
@@ -60,8 +59,7 @@
 })();
 
 // 购物车hover
-(function(){
-  
+(function shopCart(){
   $('#header').on('mouseenter', '.shopCart', function(){        
     $cartGoods = $('.cartGoods')
     $cartGoods.show(); 
@@ -76,7 +74,7 @@
 
 
 // 导航栏hover
-(function(){
+(function navigator(){
   $('#header').on('mouseenter', '.navList>li', function(e){  
     $target = $(e.target)
     $target.children().show()  // 或者是 $target.find('ul').show()
@@ -89,52 +87,50 @@
 })();
 
 
+// 放大镜
+(function Magnify(){
+  $pic = $('.pic')
+  $mask = $('.mask')
+  $bigPic= $('.bigPic')
+  $img= $('.bigPic img')
 
-(function(){
+  $pic.mouseenter(()=>{
+    $mask.css( 'display','block');
+    $bigPic.css('display','block');
+  })
 
-$pic = $('.pic')
-$mask = $('.mask')
-$bigPic= $('.bigPic')
-$img= $('.bigPic img')
+  $pic.mouseleave(()=>{
+    $mask.css('display','none');
+    $bigPic.css('display','none');
+  })
 
-$pic.mouseenter(()=>{
-  $mask.css( 'display','block');
-  $bigPic.css('display','block');
-})
-
-$pic.mouseleave(()=>{
-  $mask.css('display','none');
-  $bigPic.css('display','none');
-})
-
-$pic.mousemove( (e)=>{
- 
-  var mask_left = e.pageX - $pic.offset().left - $mask.width() /2
-  var mask_top = e.pageY - $pic.offset().top - $mask.height() /2
-
-  if (mask_left <= 0){
-    mask_left = 0
-  }
-  if (mask_left >= ($pic.width() - $mask.width())){
-    mask_left = ($pic.width() - $mask.width())
-  }
-  if (mask_top <= 0){
-    mask_top = 0
-  }
-  if ( mask_top >= ($pic.height() - $mask.height() ) ){
-    mask_top = ( $pic.height() - $mask.height() )
-  }
-
-  $mask.css({'left': mask_left + 'px', 'top': mask_top + 'px' })
+  $pic.mousemove( (e)=>{
   
-  var scaleX = mask_left/($pic.width() - $mask.width() )
-  var scaleY = mask_top/($pic.height() - $mask.height() )
+    var mask_left = e.pageX - $pic.offset().left - $mask.width() /2
+    var mask_top = e.pageY - $pic.offset().top - $mask.height() /2
 
-  var img_left = ($img.width() - $bigPic.width())*scaleX
-  var img_top = ($img.height() - $bigPic.height())*scaleY
+    if (mask_left <= 0){
+      mask_left = 0
+    }
+    if (mask_left >= ($pic.width() - $mask.width())){
+      mask_left = ($pic.width() - $mask.width())
+    }
+    if (mask_top <= 0){
+      mask_top = 0
+    }
+    if ( mask_top >= ($pic.height() - $mask.height() ) ){
+      mask_top = ( $pic.height() - $mask.height() )
+    }
 
-  $img.css({'left': -img_left + 'px', 'top': -img_top + 'px' })
-  
-})
+    $mask.css({'left': mask_left + 'px', 'top': mask_top + 'px' })
+    
+    var scaleX = mask_left/($pic.width() - $mask.width() )
+    var scaleY = mask_top/($pic.height() - $mask.height() )
 
+    var img_left = ($img.width() - $bigPic.width())*scaleX
+    var img_top = ($img.height() - $bigPic.height())*scaleY
+
+    $img.css({'left': -img_left + 'px', 'top': -img_top + 'px' })
+    
+  })
 })();

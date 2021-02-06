@@ -50,6 +50,7 @@ text-align: center;width: 176px;}
 .cartProduct tbody .num input{margin: 0 4px;width: 30px;height: 18px;border: 1px solid #D8D8D8;float: left;text-align: center;}
 .cartProduct tbody .num .decrease{float: left;}
 .cartProduct tbody .num .increase{float: left;}
+.cartProduct tbody .operate{cursor: pointer;}
 
 .summary{padding: 12px 10px 10px 0;background: #FFFEF5;border: 1px solid #EBE5BB;line-height: 25px;width: 968px;position: relative;color: #333;margin-top: 14px; overflow: hidden;}
 .summary em,.summary .total a{color: #a10000;font-weight: bold;}

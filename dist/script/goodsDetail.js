@@ -1,31 +1,27 @@
 
 
 // 头部悬浮栏
-(function(){
-  $navsCon = $('.navsContainer')
-  
+(function topFloat(){
+  $navsCon = $('.navsContainer') 
   $(window).scroll( function(e){
     if($(window).scrollTop() >= 850){
       $navsCon.css('display','block')
     }   
   });
-
   $(window).scroll( function(){
     if($(window).scrollTop() < 850){
       $navsCon.css('display','none')
     } 
   });
-
 })();
 
 
 // 右侧悬浮栏
-(function(){
+(function rightFloat(){
   $rightFloat = $('.rightFloat')
   $tab = $('.tab')
   // 保存当前坐标状态
-  var $flag = 0
-  
+  var $flag = 0 
   $tab.click( ()=>{
     var leftValue = $rightFloat.offset().left
     // 判断已改变坐标
@@ -39,7 +35,6 @@
     // 给外面返回最新坐标
     return $flag
   });
-
   // 简易实现：enter+click
   // $tab.mouseenter( ()=>{
   //     $rightFloat.animate( {right: '0px'}, 'slow' )    
@@ -47,7 +42,6 @@
   // $tab.click( ()=>{
   //     $rightFloat.animate( {right: '-276px'}, 'slow')   
   // });
-
 })();
 
 // 微信hover
@@ -69,14 +63,23 @@
 (function(){
   $shopCart = $('.shopCart')
   $cartGoods = $('.cartGoods')
-  $shopCart.mouseenter(
-    function () {
+  $shopCart.mouseenter( ()=>{
       $cartGoods.show();
     }
   )
-  $shopCart.mouseleave(
-    function () {
-      $cartGoods.hide();
+
+  $cartGoods.mousemove( (e)=>{
+    var $target = $(e.target)
+    if ( $target.is($shopCart) || $target.is($cartGoods) ){
+      $cartGoods.show();
+    }
+  })
+  $cartGoods.mouseleave( ()=>{
+    $cartGoods.hide();
+    }
+  )
+  $shopCart.mouseleave( ()=>{
+    $cartGoods.hide();
     }
   )
 })();

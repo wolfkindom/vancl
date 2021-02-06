@@ -1,46 +1,76 @@
-
-
 // 微信hover
 (function(){
-  $wechat = $('.wechat')
-  $qrcode = $('.qrcode')
-  $wechat.hover(
-    function () {
-      $qrcode.show();
-    },
-    function () {
-      $qrcode.hide();
-    }
-  )
+
+  $('#header').on('mouseenter', '.wechat', function(){        
+    $qrcode = $('.qrcode')
+    $qrcode.show(); 
+  });
+
+  $('#header').on('mouseleave', '.wechat', function(){
+    $qrcode = $('.qrcode')
+    $qrcode.hide();  
+  })
 })();
 
 // 购物车hover
 (function(){
-  $shopCart = $('.shopCart')
-  $cartGoods = $('.cartGoods')
-  $shopCart.hover(
-    function () {
-      $cartGoods.show();
-    },
-    function () {
-      $cartGoods.hide();
-    }
-  )
+  
+  $('#header').on('mouseenter', '.shopCart', function(){        
+    $cartGoods = $('.cartGoods')
+    $cartGoods.show(); 
+  });
+
+  $('#header').on('mouseleave', '.shopCart', function(){
+    $cartGoods = $('.cartGoods')
+    $cartGoods.hide();  
+  })
 })();
 
+
+
+
 // 摇粒绒hover
+
+// (function(){
+  
+//   $('#header').on('mouseenter', '.fleece1', function(){        
+//     $fleece = $('.fleece')
+//     $fleece.show(); 
+//   });
+
+//   $('#header').on('mouseleave', '.fleece1', function(){
+//     $fleece = $('.fleece')
+//     $fleece.hide();  
+//   })
+// })();
+
+// 所有导航栏hover
 (function(){
-  $fleece1 = $('.fleece1')
-  $fleece = $('.fleece')
-  $fleece1.hover(
-    function () {
-      $fleece.show();
-    },
-    function () {
-      $fleece.hide();
-    }
-  )
+  
+  $('#header').on('mouseenter', '.navList>li', function(){  
+    $('.navList>li').each(function(){   
+      // console.log($(this));   
+      $_this = $(this)
+      $_this.each(function(){
+        console.log( $(this) );
+      })
+      // $('.navList>li ul').each(function(){
+      //   // $(this).show();
+      //   console.log($(this));
+      // })
+    })  
+  });
+
+  $('#header').on('mouseleave', '.navList>li', function(){
+    $('.navList>li ul').each(function(){
+      $(this).hide();
+    })
+  })
 })();
+
+
+
+
 
 // 商务衬衫hover
 (function(){

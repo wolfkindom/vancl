@@ -364,8 +364,8 @@
 /* 商品分类条目 */
 #sweater {width: 1200px;margin: 0 auto;}
 /* 商品数据 */
-#goods{height: 2000px;}
-.goods-con{width: 1200px;height: auto;margin: 0 auto;}
+// #goods{height: 3000px;}
+.goods-con{width: 1200px;height: auto;margin: 0 auto; overflow: hidden;}
 .list .listItem{background: #FFF;margin: 20px 15px 45px 20px;width: 260px;height: 260px;padding: 0px;float: left;}
 .list .listItem img{width: 224px;height: 224px;margin:0 0 0 20px;}
 .list .listItem h3{height: 17px;line-height: 17px;text-align: center;font-weight: bold;background: #ffffff;margin: 5px 0px 7px 0px;overflow: hidden;font-size: 14px;}

@@ -26,53 +26,7 @@ define(['jquery'], function($){
       }
     })
   }
-  function footer(){
-    $(`
-      <div id="help">
-        <div class="help-main">
-          <div class="helpTop">
-              <div class="helpTop1">
-                <img src="./image/onlinecustomer.png" alt=""> <br>
-                <button> 7X9小时在线客服 </button>
-              </div>
-              <div class="helpTop2">
-                <img src="./image/seven.png" alt=""> <br>
-                <span>7天内退货</span> <br>
-                <span>购物满199元免运费</span>
-              </div>
-              <div class="helpTop3">
-                <img src="./image/fkqrcode.jpg" alt=""> <br>
-                <span>扫描下载凡客客户端</span>
-              </div>
-          </div>
-          <div class="helpBottom">
-            <ul>
-              <li>关于凡客</li>
-              <li>新手指南</li>
-              <li>配送范围及时间</li>
-              <li>支付</li>
-              <li>售后服务</li>
-              <li>帮助中心</li>
-            </ul>
-          </div>
-        </div>
-      </div> 
-      <div id="copyright">
-        <div class="copy-main">
-          <div class="copyContent">
-            <span>Copyright 2007 - 2020 vancl.com All Rights Reserved京ICP备08000757号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</span> <br>
-            <span>凡客诚品（北京）科技有限公司</span>
-          </div>
-          <div class="copyLogo">
-            <span class="logo1"></span>
-            <span class="logo2"></span>
-            <span class="logo3"></span>
-          </div>
-        </div>
-      </div>
-    `).appendTo('#footer')
-  }
-
+  // 头部添加
   function header(){
     $(`
       <div id="title">
@@ -242,6 +196,54 @@ define(['jquery'], function($){
       </div> 
     `).appendTo('#header')
   }
+  // 尾部添加
+  function footer(){
+    $(`
+      <div id="help">
+        <div class="help-main">
+          <div class="helpTop">
+              <div class="helpTop1">
+                <img src="./image/onlinecustomer.png" alt=""> <br>
+                <button> 7X9小时在线客服 </button>
+              </div>
+              <div class="helpTop2">
+                <img src="./image/seven.png" alt=""> <br>
+                <span>7天内退货</span> <br>
+                <span>购物满199元免运费</span>
+              </div>
+              <div class="helpTop3">
+                <img src="./image/fkqrcode.jpg" alt=""> <br>
+                <span>扫描下载凡客客户端</span>
+              </div>
+          </div>
+          <div class="helpBottom">
+            <ul>
+              <li>关于凡客</li>
+              <li>新手指南</li>
+              <li>配送范围及时间</li>
+              <li>支付</li>
+              <li>售后服务</li>
+              <li>帮助中心</li>
+            </ul>
+          </div>
+        </div>
+      </div> 
+      <div id="copyright">
+        <div class="copy-main">
+          <div class="copyContent">
+            <span>Copyright 2007 - 2020 vancl.com All Rights Reserved京ICP备08000757号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</span> <br>
+            <span>凡客诚品（北京）科技有限公司</span>
+          </div>
+          <div class="copyLogo">
+            <span class="logo1"></span>
+            <span class="logo2"></span>
+            <span class="logo3"></span>
+          </div>
+        </div>
+      </div>
+    `).appendTo('#footer')
+  }
+
   return{
     download: download,
     footer: footer,

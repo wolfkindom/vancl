@@ -30,16 +30,32 @@
 
 
 // 导航栏hover
+// (function(){
+//   $('#header').on('mouseenter', '.navList>li', function(e){  
+//     $target = $(e.target)
+//     $target.children().show()  // 或者是 $target.find('ul').show()
+//   });
+//   $('#header').on('mouseleave', '.navList ul', function(e){  
+//     $target = $(e.target)
+//     $target.children().hide()
+    
+//   })
+// })();
+
+// 导航栏hover
 (function(){
-  $('#header').on('mouseenter', '.navList>li', function(e){  
+  $('#header').on('mouseover', '.navList>li', function(e){  
     $target = $(e.target)
     $target.children().show()  // 或者是 $target.find('ul').show()
+    
   });
-  $('#header').on('mouseleave', '.navList>li', function(e){  
+
+  $('#header').on('mouseout', '.navList>li', function(e){  
     $target = $(e.target)
-    $target.find('ul').hide()
+    $target.children().hide()
   })
 
+    
 })();
 
 

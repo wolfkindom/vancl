@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navsContainer {
+.topFloat {
   height: 52px;
   margin: 0;
   padding: 2px 0 0 0;
@@ -8,24 +8,24 @@
   top: -1px;
   z-index: 9999;
   display: block; }
-  .navsContainer .navItem {
+  .topFloat .navItem {
     height: 50px;
     font-size: 12px;
     color: #333;
     border: 1px solid #e5e6e6; }
-    .navsContainer .navItem .leftNav {
+    .topFloat .navItem .leftNav {
       height: 46px;
       line-height: 46px;
       font-size: 18px;
       margin: 0 20px;
       float: left; }
-    .navsContainer .navItem .rightNav {
+    .topFloat .navItem .rightNav {
       width: 380px;
       height: 46px;
       float: right;
       position: relative;
       cursor: pointer; }
-      .navsContainer .navItem .rightNav .right1 {
+      .topFloat .navItem .rightNav .right1 {
         width: 200px;
         height: 35px;
         float: left;
@@ -34,7 +34,7 @@
         position: absolute;
         right: 190px;
         bottom: 0px; }
-      .navsContainer .navItem .rightNav .right2 {
+      .topFloat .navItem .rightNav .right2 {
         width: 155px;
         height: 30px;
         float: left;
@@ -146,323 +146,320 @@
   min-height: 100%;
   padding-bottom: 520px;
   box-sizing: border-box;
-  position: relative; }
-  #container header {
+  position: relative;
+  /* 头部栏 */
+  /* 搜索栏 */
+  /* 导航栏 */ }
+  #container #title {
     width: 100%;
-    height: 250px;
-    /* 头部栏 */
-    /* 搜索栏 */
-    /* 导航栏 */ }
-    #container header #title {
-      width: 100%;
-      height: 31px;
-      background: #f7f7f7; }
-      #container header #title .tit-main {
-        width: 1200px;
-        height: 31px;
-        line-height: 32px;
-        margin: 0 auto;
-        background: #f7f7f7; }
-        #container header #title .tit-main .content {
-          float: right; }
-        #container header #title .tit-main span {
-          font-size: 12px;
-          float: left;
-          color: #808080;
-          margin-right: 15px;
-          cursor: pointer; }
-        #container header #title .tit-main span:hover {
-          color: red; }
-        #container header #title .tit-main .notice {
-          text-indent: 30px;
-          background: url(../image/notice.png) no-repeat left 6px; }
-        #container header #title .tit-main .wechat {
-          width: 20px;
-          height: 25px;
-          float: right;
-          background: url(../image/w1.jpg) no-repeat left 6px; }
-        #container header #title .tit-main .qrcode {
-          position: absolute;
-          width: 128px;
-          height: 149px;
-          right: 180px;
-          top: 30px;
-          border: 1px solid #e5e5e5;
-          overflow: hidden;
-          display: none;
-          z-index: 999; }
-        #container header #title .tit-main .weibo {
-          width: 20px;
-          height: 25px;
-          float: right;
-          background: url(../image/w2.jpg) no-repeat left 6px; }
-    #container header #search {
-      width: 100%;
-      height: 62px;
-      margin-top: 10px; }
-      #container header #search .srh-main {
-        width: 1200px;
-        height: 58px;
-        margin: 0 auto; }
-        #container header #search .srh-main .content {
-          width: 470px;
-          padding-top: 4px;
-          float: right; }
-          #container header #search .srh-main .content .srh-btn {
-            float: right;
-            margin-top: 10px;
-            overflow: hidden;
-            position: relative; }
-            #container header #search .srh-main .content .srh-btn input {
-              font-size: 12px;
-              width: 255px;
-              height: 27px;
-              float: left;
-              border: 2px solid #c9caca; }
-            #container header #search .srh-main .content .srh-btn .seek {
-              width: 50px;
-              height: 30px;
-              float: left;
-              color: white;
-              background: #C51818;
-              border: none;
-              cursor: pointer; }
-            #container header #search .srh-main .content .srh-btn .shopCart {
-              width: 108px;
-              height: 30px;
-              float: left;
-              margin: 2px 0 0 25px;
-              padding-left: 30px;
-              color: white;
-              border: none;
-              background: url(../image/xuebi.png) no-repeat -152px 0;
-              cursor: pointer; }
-          #container header #search .srh-main .content .hot-srh {
-            width: 440px;
-            height: 30px;
-            line-height: 30px;
-            float: right; }
-            #container header #search .srh-main .content .hot-srh ul {
-              width: 440px;
-              height: 30px; }
-              #container header #search .srh-main .content .hot-srh ul li {
-                height: 30px;
-                font-size: 12px;
-                margin-right: 12px;
-                float: left;
-                cursor: pointer; }
-              #container header #search .srh-main .content .hot-srh ul li:nth-child(1) {
-                margin-right: 2px; }
-          #container header #search .srh-main .content .cartGoods {
-            width: 315px;
-            height: 160px;
-            padding: 5px;
-            border: 1px solid #b81c22;
-            border-top: none;
-            position: absolute;
-            top: 86px;
-            right: 159px;
-            background: #ffffff;
-            display: none;
-            z-index: 999; }
-            #container header #search .srh-main .content .cartGoods .content {
-              width: 300px;
-              height: 170px;
-              margin: 10px 10px 0; }
-              #container header #search .srh-main .content .cartGoods .content h3 {
-                font-size: 12px;
-                color: #727171;
-                margin: 0 0 0 5px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid #ccc; }
-              #container header #search .srh-main .content .cartGoods .content .goods-detail {
-                overflow: hidden;
-                margin: 15px 0 0 10px;
-                padding-bottom: 10px;
-                border-bottom: 1px solid #ccc; }
-                #container header #search .srh-main .content .cartGoods .content .goods-detail img {
-                  float: left; }
-                #container header #search .srh-main .content .cartGoods .content .goods-detail div {
-                  font-size: 12px;
-                  margin-left: 10px;
-                  float: left; }
-                #container header #search .srh-main .content .cartGoods .content .goods-detail p {
-                  font-size: 12px;
-                  margin-left: 55px;
-                  float: left;
-                  cursor: pointer; }
-              #container header #search .srh-main .content .cartGoods .content .total {
-                overflow: hidden;
-                margin: 20px 0 0 10px; }
-                #container header #search .srh-main .content .cartGoods .content .total div {
-                  float: left;
-                  font-size: 12px; }
-                #container header #search .srh-main .content .cartGoods .content .total button {
-                  float: left;
-                  color: #fff;
-                  margin-left: 55px;
-                  padding: 5px 10px;
-                  background: #b81c22;
-                  border: none;
-                  cursor: pointer; }
-    #container header #nav .nav-main {
+    height: 31px;
+    background: #f7f7f7; }
+    #container #title .tit-main {
       width: 1200px;
-      height: 60px;
-      padding-top: 50px;
-      margin: 0 auto; }
-      #container header #nav .nav-main a {
-        width: 185px;
-        height: 46px;
+      height: 31px;
+      line-height: 32px;
+      margin: 0 auto;
+      background: #f7f7f7; }
+      #container #title .tit-main .content {
+        float: right; }
+      #container #title .tit-main span {
+        font-size: 12px;
         float: left;
-        background: url(../image/xuebi.png) no-repeat 0 -60px;
+        color: #808080;
+        margin-right: 15px;
         cursor: pointer; }
-      #container header #nav .nav-main .navList {
-        width: 1000px;
-        float: left;
-        text-align: center;
-        position: relative; }
-        #container header #nav .nav-main .navList > li {
-          width: 96px;
+      #container #title .tit-main span:hover {
+        color: red; }
+      #container #title .tit-main .notice {
+        text-indent: 30px;
+        background: url(../image/notice.png) no-repeat left 6px; }
+      #container #title .tit-main .wechat {
+        width: 20px;
+        height: 25px;
+        float: right;
+        background: url(../image/w1.jpg) no-repeat left 6px; }
+      #container #title .tit-main .qrcode {
+        position: absolute;
+        width: 128px;
+        height: 149px;
+        right: 180px;
+        top: 30px;
+        border: 1px solid #e5e5e5;
+        overflow: hidden;
+        display: none;
+        z-index: 999; }
+      #container #title .tit-main .weibo {
+        width: 20px;
+        height: 25px;
+        float: right;
+        background: url(../image/w2.jpg) no-repeat left 6px; }
+  #container #search {
+    width: 100%;
+    height: 62px;
+    margin-top: 10px; }
+    #container #search .srh-main {
+      width: 1200px;
+      height: 58px;
+      margin: 0 auto; }
+      #container #search .srh-main .content {
+        width: 470px;
+        padding-top: 4px;
+        float: right; }
+        #container #search .srh-main .content .srh-btn {
+          float: right;
+          margin-top: 10px;
+          overflow: hidden;
+          position: relative; }
+          #container #search .srh-main .content .srh-btn input {
+            font-size: 12px;
+            width: 255px;
+            height: 27px;
+            float: left;
+            border: 2px solid #c9caca; }
+          #container #search .srh-main .content .srh-btn .seek {
+            width: 50px;
+            height: 30px;
+            float: left;
+            color: white;
+            background: #C51818;
+            border: none;
+            cursor: pointer; }
+          #container #search .srh-main .content .srh-btn .shopCart {
+            width: 108px;
+            height: 30px;
+            float: left;
+            margin: 2px 0 0 25px;
+            padding-left: 30px;
+            color: white;
+            border: none;
+            background: url(../image/xuebi.png) no-repeat -152px 0;
+            cursor: pointer; }
+        #container #search .srh-main .content .hot-srh {
+          width: 440px;
           height: 30px;
           line-height: 30px;
-          margin-top: 12px;
-          float: left;
-          border-right: 2px solid #ccc;
-          cursor: pointer; }
-          #container header #nav .nav-main .navList > li:nth-child(1) {
-            margin-left: 10px; }
-          #container header #nav .nav-main .navList > li:nth-child(2) {
-            background: url(../image/icon_hot.png) no-repeat 56px 0px; }
-          #container header #nav .nav-main .navList > li:nth-child(3) {
-            background: url(../image/icon_hot.png) no-repeat 63px 0px; }
-          #container header #nav .nav-main .navList > li:nth-child(6) {
-            background: url(../image/icon_hot.png) no-repeat 47px 0px; }
-        #container header #nav .nav-main .navList .fleece {
-          font-size: 14px;
-          width: 96px;
+          float: right; }
+          #container #search .srh-main .content .hot-srh ul {
+            width: 440px;
+            height: 30px; }
+            #container #search .srh-main .content .hot-srh ul li {
+              height: 30px;
+              font-size: 12px;
+              margin-right: 12px;
+              float: left;
+              cursor: pointer; }
+            #container #search .srh-main .content .hot-srh ul li:nth-child(1) {
+              margin-right: 2px; }
+        #container #search .srh-main .content .cartGoods {
+          width: 315px;
+          height: 160px;
+          padding: 5px;
+          border: 1px solid #b81c22;
+          border-top: none;
           position: absolute;
-          left: 107px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
+          top: 86px;
+          right: 159px;
+          background: #ffffff;
           display: none;
-          background: white;
           z-index: 999; }
-        #container header #nav .nav-main .navList .business {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 205px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .relax {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 303px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .sweater {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 401px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .coat {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 499px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .knitwear {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 597px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .pants {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 695px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .shoe {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 793px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
-        #container header #nav .nav-main .navList .furniture {
-          font-size: 14px;
-          width: 96px;
-          position: absolute;
-          left: 891px;
-          top: 44px;
-          border: 1px solid #ccc;
-          border-radius: 0px 0px 5px 5px;
-          display: block;
-          border-top: 6px solid red;
-          text-align: center;
-          display: none;
-          background: white;
-          z-index: 999; }
+          #container #search .srh-main .content .cartGoods .content {
+            width: 300px;
+            height: 170px;
+            margin: 10px 10px 0; }
+            #container #search .srh-main .content .cartGoods .content h3 {
+              font-size: 12px;
+              color: #727171;
+              margin: 0 0 0 5px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #ccc; }
+            #container #search .srh-main .content .cartGoods .content .goods-detail {
+              overflow: hidden;
+              margin: 15px 0 0 10px;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #ccc; }
+              #container #search .srh-main .content .cartGoods .content .goods-detail img {
+                float: left; }
+              #container #search .srh-main .content .cartGoods .content .goods-detail div {
+                font-size: 12px;
+                margin-left: 10px;
+                float: left; }
+              #container #search .srh-main .content .cartGoods .content .goods-detail p {
+                font-size: 12px;
+                margin-left: 55px;
+                float: left;
+                cursor: pointer; }
+            #container #search .srh-main .content .cartGoods .content .total {
+              overflow: hidden;
+              margin: 20px 0 0 10px; }
+              #container #search .srh-main .content .cartGoods .content .total div {
+                float: left;
+                font-size: 12px; }
+              #container #search .srh-main .content .cartGoods .content .total button {
+                float: left;
+                color: #fff;
+                margin-left: 55px;
+                padding: 5px 10px;
+                background: #b81c22;
+                border: none;
+                cursor: pointer; }
+  #container #nav .nav-main {
+    width: 1200px;
+    height: 60px;
+    padding-top: 50px;
+    margin: 0 auto; }
+    #container #nav .nav-main a {
+      width: 185px;
+      height: 46px;
+      float: left;
+      background: url(../image/xuebi.png) no-repeat 0 -60px;
+      cursor: pointer; }
+    #container #nav .nav-main .navList {
+      width: 1000px;
+      float: left;
+      text-align: center;
+      position: relative; }
+      #container #nav .nav-main .navList > li {
+        width: 96px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 12px;
+        float: left;
+        border-right: 2px solid #ccc;
+        cursor: pointer; }
+        #container #nav .nav-main .navList > li:nth-child(1) {
+          margin-left: 10px; }
+        #container #nav .nav-main .navList > li:nth-child(2) {
+          background: url(../image/icon_hot.png) no-repeat 56px 0px; }
+        #container #nav .nav-main .navList > li:nth-child(3) {
+          background: url(../image/icon_hot.png) no-repeat 63px 0px; }
+        #container #nav .nav-main .navList > li:nth-child(6) {
+          background: url(../image/icon_hot.png) no-repeat 47px 0px; }
+      #container #nav .nav-main .navList .fleece {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 107px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .business {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 205px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .relax {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 303px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .sweater {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 401px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .coat {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 499px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .knitwear {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 597px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .pants {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 695px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .shoe {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 793px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
+      #container #nav .nav-main .navList .furniture {
+        font-size: 14px;
+        width: 96px;
+        position: absolute;
+        left: 891px;
+        top: 44px;
+        border: 1px solid #ccc;
+        border-radius: 0px 0px 5px 5px;
+        display: block;
+        border-top: 6px solid red;
+        text-align: center;
+        display: none;
+        background: white;
+        z-index: 999; }
   #container .wrap {
     width: 100%; }
     #container .wrap #detail .detail-main {
@@ -1206,3 +1203,15 @@
           height: 42px;
           float: left;
           background: url(../image/copyright.png) no-repeat -202px -675px; }
+
+/* 回到顶部  */
+.toTop {
+  width: 25px;
+  height: 90px;
+  display: none;
+  background: url(../image/backtotop.png) no-repeat;
+  right: 10px;
+  bottom: 10px;
+  position: fixed;
+  z-index: 9999;
+  cursor: pointer; }

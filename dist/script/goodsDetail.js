@@ -1,20 +1,18 @@
 
-
-// 头部悬浮栏
+// 顶部悬浮栏
 (function topFloat(){
-  $navsCon = $('.navsContainer') 
+  $topFloat = $('.topFloat') 
   $(window).scroll( function(e){
     if($(window).scrollTop() >= 850){
-      $navsCon.css('display','block')
+      $topFloat.css('display','block')
     }   
   });
   $(window).scroll( function(){
     if($(window).scrollTop() < 850){
-      $navsCon.css('display','none')
+      $topFloat.css('display','none')
     } 
   });
 })();
-
 
 // 右侧悬浮栏
 (function rightFloat(){
@@ -44,7 +42,6 @@
   // });
 })();
 
-
 // 微信hover
 (function wechat(){
   $('#header').on('mouseenter', '.wechat', function(){        
@@ -71,8 +68,6 @@
   })
 })();
 
-
-
 // 导航栏hover
 (function navigator(){
   $('#header').on('mouseenter', '.navList>li', function(e){  
@@ -85,7 +80,6 @@
   })
 
 })();
-
 
 // 放大镜
 (function Magnify(){
@@ -133,4 +127,53 @@
     $img.css({'left': -img_left + 'px', 'top': -img_top + 'px' })
     
   })
+})();
+
+// 回到顶部
+(function toTop(){
+  $toTop = $('.toTop')
+  $timer = null
+  // 判断logo是否显示
+  $(window).scroll( function(e){
+    if($(window).scrollTop() >= 200){
+      $toTop.css('display','block')
+    }   
+  });
+  $(window).scroll( function(){
+    if($(window).scrollTop() < 200){
+      $toTop.css('display','none')
+    } 
+  });
+
+  // 获取滚动条位置
+  var getTop = ()=>{
+    getScrollTop = document.documentElement.scrollTop == 0
+    ? document.body.scrollTop
+    : document.documentElement.scrollTop
+    return getScrollTop
+  }
+  // 获取滚动条位置
+  var setTop = (top)=>{
+      document.documentElement.scrollTop == 0
+      ? document.body.scrollTop = top
+      : document.documentElement.scrollTop = top
+  }
+  // 滚动条运动 
+  $toTop.click(()=>{ 
+      $timer = setInterval(() => {
+          var backTop = getTop()
+          var speedTop = backTop / 10
+          setTop(backTop - speedTop)
+          // 检测鼠标滚轮是否滚动
+          $(window).on( 'mousewheel',(delta)=>{
+            if(delta != 0){
+              clearInterval($timer)
+            }
+          })
+          if(backTop == 0){
+            clearInterval($timer)
+          }
+      }, 20);
+  }) 
+  
 })();

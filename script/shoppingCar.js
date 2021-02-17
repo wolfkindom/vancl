@@ -3,7 +3,6 @@
     // var incs = document.querySelector('.cartProduct tbody .num .increase')
     // var nums = document.querySelector('.cartProduct tbody .num input')
 
-
     // for ( var i = 0, len = decs.length; i < len; i++ ) {
     //   decs[i].index = i
     //   decs[i].onclick = function (){
@@ -31,8 +30,6 @@
   //   var newLi = `<li>购物车空空如也，快去加购商品吧！</li>`
   //   $('.list').html(newLi)
   // }
-
-
 
 
 $(function (){
@@ -72,7 +69,7 @@ $(function (){
   //       $('tbody').append(domStr)
   //     }
   //   })
-
+    
     // 全选1(四种方式拿到checked属性)-----(三种方式设置设置checked属性)
     $('.cartProduct').on('click','thead .theadAll',function (){
       if ($('.cartProduct thead .theadAll').prop('checked')) {
@@ -108,8 +105,9 @@ $(function (){
       alert('商品数量为1，不能再减少了！')
     } else {
       var num = Number($(this).siblings('input').val()) - 1
-      // var id = $(this).siblings('em').attr('data-id')
       $(this).siblings('input').val(num)
+      // var id = $(this).siblings('em').attr('data-id')
+     
       // $.each(goodsArr,function (index,item){
       //   if (item.id == id){
       //     item.num--
@@ -124,8 +122,9 @@ $(function (){
   // 商品数量加1
   $('.cartProduct table').on('click','tbody .num .increase',function (){
     var num = Number($(this).siblings('input').val()) + 1
-    // var id = $(this).siblings('em').attr('data-id')
     $(this).siblings('input').val(num)
+    // var id = $(this).siblings('em').attr('data-id')
+    
 
 
     // json数据遍历
@@ -146,20 +145,25 @@ $(function (){
     if ($(this).prop('checked')){
       var $checks = $('tbody .choose input')
       $.each($checks,function (index,item){
-        // console.log($(item).prop('checked'))
-        // console.log($(item).length);
-        console.log($(item).is(':checked'));
-        // for (var i = 0;i<$(item).is(':checked').length;i++){}
-        if ($(item).is(':checked') == false){
-          return
-        }
-        $('.cartProduct thead .theadAll').prop('checked','true')
-        $('.summary .bar input').prop('checked','true')
+        // console.log($(item).is(':checked'));
+        console.log(item.checked)
+        if (!item.checked){
+          $('.cartProduct thead .theadAll').prop('checked',false)
+          $('.summary .bar input').prop('checked',false)
+        } else {
+          $('.cartProduct thead .theadAll').prop('checked',true)
+          $('.summary .bar input').prop('checked',true)
+        }  
       })  
     } else {
       $('.cartProduct thead .theadAll').removeAttr('checked')
       $('.summary .bar input').removeAttr('checked')
     }
+  })
+
+  // 删除
+  $('.cartProduct').on('click','tbody tr td.operate',function (){
+    $(this).parent().remove()
   })
 
 
@@ -180,10 +184,6 @@ $(function (){
     alert('正在跳转支付页面，亲，您即将消费 '+count+' 元，小店概不赊账，如实在想买，可提供特别滴等价交换服务哟~~详情联系客服')
   })
 
-  // 删除
-  $('.cartProduct').on('click','tbody tr td.operate',function (){
-    $(this).parent().remove()
-  })
 
   // 结算框数量总计
   $allNumber = $('.bar span em')

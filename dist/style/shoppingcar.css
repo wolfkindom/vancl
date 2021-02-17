@@ -181,10 +181,12 @@
   text-align: center; }
 
 .cartProduct tbody .num .decrease {
-  float: left; }
+  float: left;
+  cursor: pointer; }
 
 .cartProduct tbody .num .increase {
-  float: left; }
+  float: left;
+  cursor: pointer; }
 
 .cartProduct tbody .operate {
   cursor: pointer; }

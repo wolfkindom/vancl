@@ -82,9 +82,27 @@ $(function (){
       // document.querySelectorAll('.tbody tr .choose input').checked = true ------原生API不可直接 同时操作 多个元素 只能遍历设置！！！
       $('tbody tr .choose input').prop('checked',true)
       $('.summary .bar input').prop('checked',true)
+      var $subtotal = $('tbody .subtotal')
+      var $num = $('tbody .num input')
+      var totalPrice = 0 
+      var totalNum = 0
+      // 全选1与金额总计的关联
+      $.each($subtotal, function (index, item){
+        // totalPrice += Number(item.innerText.slice(1)) ---方法1
+        totalPrice += parseInt($(item).text().slice(1)) // ---方法2
+      })
+      $('.summary .total em').text('￥'+totalPrice)
+      // 全选1与数量总计的关联
+      $.each($num, function (index, item){
+        // totalNum += item.value
+        totalNum += parseInt($(item).val())
+      })
+      $('.summary .bar span em').text(totalNum)
     } else {
       $('tbody tr .choose input').removeAttr('checked')  
       $('.summary .bar input').removeAttr('checked')  
+      $('.summary .total em').text('￥'+'0.00')
+      $('.summary .bar span em').text(0)
     }     
   })
 
@@ -93,9 +111,26 @@ $(function (){
     if ($('.summary .bar input').prop('checked')) {
       $('tbody tr .choose input').prop('checked',true)
       $('.cartProduct thead .theadAll').prop('checked',true)
+      var $subtotal = $('tbody .subtotal')
+      var $num = $('tbody .num input')
+      var totalPrice = 0 
+      var totalNum = 0
+      // 全选2与金额总计的关联
+      $.each($subtotal, function (index,item){
+        totalPrice += Number(item.innerText.slice(1))
+      })
+      $('.summary .total em').text('￥'+totalPrice)
+      // 全选2与数量总计的关联
+      $.each($num, function (index, item){
+        // totalNum += item.value
+        totalNum += parseInt($(item).val())
+      })
+      $('.summary .bar span em').text(totalNum)
     } else {
       $('tbody tr .choose input').removeAttr('checked')  
-      $('.cartProduct thead .theadAll').removeAttr('checked')  
+      $('.cartProduct thead .theadAll').removeAttr('checked') 
+      $('.summary .total em').text('￥'+'0.00')   
+      $('.summary .bar span em').text(0)
     }     
   })
 
@@ -105,7 +140,13 @@ $(function (){
       alert('商品数量为1，不能再减少了！')
     } else {
       var num = Number($(this).siblings('input').val()) - 1
+      // console.log(num);
+      var eachPrice = $(this).closest('.num').siblings('.price').text().slice(1)
+      // console.log(eachPrice);
+      var subtotal = num * eachPrice
       $(this).siblings('input').val(num)
+      $(this).closest('.num').siblings('.subtotal').text('￥'+subtotal) 
+
       // var id = $(this).siblings('em').attr('data-id')
      
       // $.each(goodsArr,function (index,item){
@@ -122,11 +163,13 @@ $(function (){
   // 商品数量加1
   $('.cartProduct table').on('click','tbody .num .increase',function (){
     var num = Number($(this).siblings('input').val()) + 1
+    var eachPrice = $(this).closest('.num').siblings('.price').text().slice(1)
+    var subtotal = num * eachPrice
     $(this).siblings('input').val(num)
+    $(this).closest('.num').siblings('.subtotal').text('￥'+subtotal) 
+
     // var id = $(this).siblings('em').attr('data-id')
     
-
-
     // json数据遍历
     // $.each(goodsArr,function (index,item){
     //   if (item.id == id){
@@ -139,14 +182,20 @@ $(function (){
   })
 
 
-  // 单行复选框和全选1、全选2的对应关系
+  // 1.单行复选框和全选1、全选2的对应关系 
+  // 2.单行复选框和数量总计与金额总计的对应关系
   $('.cartProduct').on('click','tbody .choose input',function (){
     // 遍历其他所有单选框是否都是选中，选中则让全选1、全选2都选中
     if ($(this).prop('checked')){
       var $checks = $('tbody .choose input')
+      var $subtotal = $('tbody .subtotal')
+      var $num = $('tbody .num input')
+      var totalPrice = 0 
+      var totalNum = 0
+      // 关联单行复选框和全选1、全选2
       $.each($checks,function (index,item){
         // console.log($(item).is(':checked'));
-        console.log(item.checked)
+        // console.log(item.checked)
         if (!item.checked){
           $('.cartProduct thead .theadAll').prop('checked',false)
           $('.summary .bar input').prop('checked',false)
@@ -155,35 +204,34 @@ $(function (){
           $('.summary .bar input').prop('checked',true)
         }  
       })  
+      
+      // 关联单行复选框和金额总计
+      $.each($subtotal, function (index, item){
+        // totalPrice += Number(item.innerText.slice(1)) ---方法1
+        totalPrice += parseInt($(item).text().slice(1)) // ---方法2
+      })
+      $('.summary .total em').text('￥'+totalPrice)
+      // 关联单行复选框和数量总计
+      $.each($num, function (index, item){
+        // totalNum += item.value
+        totalNum += parseInt($(item).val())
+      })
+      $('.summary .bar span em').text(totalNum)
     } else {
       $('.cartProduct thead .theadAll').removeAttr('checked')
       $('.summary .bar input').removeAttr('checked')
     }
   })
 
-  // 删除
+  // 删除1
   $('.cartProduct').on('click','tbody tr td.operate',function (){
+    // 删除1移除商品
     $(this).parent().remove()
+    // 关联删除1和金额总计
+
+    // 关联删除1和数量总计
+    
   })
-
-
-  // 结算
-  $('.cartProduct').on('click','.calculate .goPay',function (){
-    var $checks = $('tbody tr .choose input')
-    // console.log($checks)
-    var $eachPrice = $('tbody td.price')
-    // console.log($eachPrice)
-    var $num = $('tbody td.num input')
-  
-    var count = 0
-    $.each($checks,function (index,item){       
-      if ($(item).prop('checked')){
-        count += parseFloat($eachPrice[index].outerText.slice(1)) * parseFloat($num[index].value)
-      }
-    })
-    alert('正在跳转支付页面，亲，您即将消费 '+count+' 元，小店概不赊账，如实在想买，可提供特别滴等价交换服务哟~~详情联系客服')
-  })
-
 
   // 结算框数量总计
   $allNumber = $('.bar span em')
@@ -198,6 +246,27 @@ $(function (){
       num += Number($(item).val())
       $allNumber.html(num)
     }) 
+  
+
+  // 结算框金额总计(先找所有选中的复选框，然后累加小计)
+
+
+
+
+
+  // 结算框支付跳转
+  $('.cartProduct').on('click','.calculate .goPay',function (){
+    var $checks = $('tbody tr .choose input')
+    var $eachPrice = $('tbody td.price')
+    var $num = $('tbody td.num input')
+    var count = 0
+    $.each($checks,function (index,item){       
+      if ($(item).prop('checked')){
+        count += parseFloat($eachPrice[index].outerText.slice(1)) * parseFloat($num[index].value)
+      }
+    })
+    alert('正在跳转支付页面，亲，您即将消费 '+count+' 元，小店概不赊账，如实在想买，可提供特别滴等价交换服务哟~~详情联系客服')
+  })
   
 
   // } 

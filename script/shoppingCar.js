@@ -48,8 +48,8 @@ $(function (){
       // document.querySelectorAll('.tbody tr .choose input').checked = true ------原生API不可直接 同时操作 多个元素 只能遍历设置！！！
       $('tbody tr .choose input').prop('checked',true)
       $('.summary .bar input').prop('checked',true)
-      var $subtotal = $('tbody .subtotal')
-      var $num = $('tbody .num input')
+      $subtotal = $('tbody .subtotal')
+      $num = $('tbody .num input')
       var totalPrice = 0 
       var totalNum = 0
       // 全选1与金额总计的关联
@@ -77,8 +77,8 @@ $(function (){
     if ($('.summary .bar input').prop('checked')) {
       $('tbody tr .choose input').prop('checked',true)
       $('.cartProduct thead .theadAll').prop('checked',true)
-      var $subtotal = $('tbody .subtotal')
-      var $num = $('tbody .num input')
+      $subtotal = $('tbody .subtotal')
+      $num = $('tbody .num input')
       var totalPrice = 0 
       var totalNum = 0
       // 全选2与金额总计的关联
@@ -105,13 +105,24 @@ $(function (){
     if ($(this).siblings('input').val() <= 0){
       alert('商品数量为1，不能再减少了！')
     } else {
-      var num = Number($(this).siblings('input').val()) - 1
-      // console.log(num);
-      var eachPrice = $(this).closest('.num').siblings('.price').text().slice(1)
-      // console.log(eachPrice);
-      var subtotal = num * eachPrice
-      $(this).siblings('input').val(num)
-      $(this).closest('.num').siblings('.subtotal').text('￥'+subtotal) 
+      $num = Number($(this).siblings('input').val()) - 1
+      $eachPrice = $(this).closest('.num').siblings('.price').text().slice(1)
+      $subtotal = $num * $eachPrice
+      $(this).siblings('input').val($num)
+      $(this).closest('.num').siblings('.subtotal').text('￥'+$subtotal) 
+
+      // 关联商品数量减少和金额总计与数量总计
+      $flag = $(this).closest('.num').siblings('.choose').children('input')
+      $count = $('.summary .total em').text().slice(1)
+      $numTotal = $('.summary .bar span em').text()
+      if (!$flag.prop('checked')){
+        return
+      }
+      $count -= $eachPrice
+      $numTotal -= 1
+      $('.summary .total em').text('￥'+$count)   
+      $('.summary .bar span em').text($numTotal)
+      
 
       // var id = $(this).siblings('em').attr('data-id')
      
@@ -128,11 +139,24 @@ $(function (){
 
   // 商品数量加1
   $('.cartProduct table').on('click','tbody .num .increase',function (){
-    var num = Number($(this).siblings('input').val()) + 1
-    var eachPrice = $(this).closest('.num').siblings('.price').text().slice(1)
-    var subtotal = num * eachPrice
-    $(this).siblings('input').val(num)
-    $(this).closest('.num').siblings('.subtotal').text('￥'+subtotal) 
+    $num = Number($(this).siblings('input').val()) + 1
+    $eachPrice = parseInt($(this).closest('.num').siblings('.price').text().slice(1))
+    $subtotal = $num * $eachPrice
+    $(this).siblings('input').val($num)
+    $(this).closest('.num').siblings('.subtotal').text('￥'+$subtotal)
+
+    // 关联商品数量增加和金额总计与数量总计
+    $flag = $(this).closest('.num').siblings('.choose').children('input')
+    $count = parseInt($('.summary .total em').text().slice(1))
+    $numTotal = parseInt($('.summary .bar span em').text())
+    if (!$flag.prop('checked')){
+      return
+    }
+    $count += $eachPrice
+    $numTotal += 1
+    $('.summary .total em').text('￥'+$count)   
+    $('.summary .bar span em').text($numTotal)
+
 
     // var id = $(this).siblings('em').attr('data-id')
     
@@ -151,7 +175,7 @@ $(function (){
   // 1.单行复选框和全选1、全选2的对应关系 
   // 2.单行复选框和数量总计与金额总计的对应关系
   $('.cartProduct').on('click','tbody .choose input',function (){ 
-    var $checks = $('tbody .choose input')
+    $checks = $('tbody .choose input')
     var totalPrice = 0 
     var totalNum = 0
     // 遍历其他所有单选框是否都是选中，选中则让全选1、全选2都选中
@@ -207,6 +231,37 @@ $(function (){
     $('.summary .bar span em').text(totalNum)
   })
 
+  // 删除2(删除特定勾选的复选框商品后默认自动全选，并重新计算金额和数量总计)
+  $('.cartProduct').on('click','.summary .bar .del',function (){
+    $checks = $('tbody .choose input')
+    $allChoose1 = $('thead .theadAll')
+    $allChoose2 = $('.summary .bar input')
+    var totalPrice = 0 
+    var totalNum = 0
+    // 删除2移除商品
+    $.each($checks, function (index, item){
+      if (item.checked){
+        $(this).closest('tr').remove()
+      }
+    })
+    $.each($checks, function (index, item){
+      $(this).prop('checked',true)
+    })
+    $allChoose1.prop('checked',true)
+    $allChoose2.prop('checked',true)
+    // 关联删除2和金额总计
+    $subtotal = $('tbody .subtotal') // 此处必须在删除后获取节点！
+    $num = $('tbody .num input')
+    $.each($subtotal, function (index, item){
+      totalPrice += parseInt($(item).text().slice(1))
+    })
+    $('.summary .total em').text('￥'+totalPrice)
+    // 关联删除2和数量总计
+    $.each($num, function (index, item){
+      totalNum += parseInt($(item).val())
+    })
+    $('.summary .bar span em').text(totalNum)
+  })
     
   // 结算框数量与金额总计
   var $checks = $('tbody .choose input')
@@ -235,7 +290,7 @@ $(function (){
   // else {
 
   //   var newLi = `<li>购物车空空如也，快去加购商品吧！</li>`
-  //   $('.list').html(newLi)
+  //   $('tbody').html(newLi)
     
   // }
 })

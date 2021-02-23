@@ -1,6 +1,25 @@
 
+// 图片延迟加载
+$(function lazyLoad() {
+  $("img").lazyload({
+    effect: "fadeIn"
+  })
+});
+
+// 登录注册跳转
+(function loginRegister(){
+  
+  $('#header').on('click', '.login', ()=>{
+    location.href = './login.html'
+  })
+
+  $('#header').on('click', '.register', ()=>{
+    location.href = './register.html'
+  })
+})();
+
 // 微信hover
-(function(){
+(function wechat(){
 
   $('#header').on('mouseenter', '.wechat', function(){        
     $qrcode = $('.qrcode')
@@ -14,59 +33,56 @@
 })();
 
 // 购物车hover
-(function(){
-  
-  $('#header').on('mouseenter', '.shopCart', function(){        
-    $cartGoods = $('.cartGoods')
-    $cartGoods.show(); 
-  });
+(function shoppingCart(){
 
-  $('#header').on('mouseleave', '.shopCart', function(){
-    $cartGoods = $('.cartGoods')
-    $cartGoods.hide();  
+  $('#header').on('click', '.checkCart', ()=>{
+    location.href = './shoppingCar.html'
   })
+
+  $('#header').on('mouseenter', '.shopCart', function(){        
+    $('.cartGoods').show(); 
+  })
+  $('#header').on('mouseleave', '.shopCart', function(){
+    $('.cartGoods').hide(); 
+  })
+
+  $('#header').on('mouseleave', '.cartGoods', function(){
+        $('.cartGoods').hide(); 
+    })
+  $('#header').on('mouseenter', '.cartGoods', function(){        
+    $('.cartGoods').show(); 
+  })
+  
 })();
 
-
-
 // 导航栏hover
-// (function(){
-//   $('#header').on('mouseenter', '.navList>li', function(e){  
-//     $target = $(e.target)
-//     $target.children().show()  // 或者是 $target.find('ul').show()
-//   });
-//   $('#header').on('mouseleave', '.navList ul', function(e){  
-//     $target = $(e.target)
-//     $target.children().hide()
-    
-//   })
-// })();
+(function navigator(){
+  $('#header').on('click', '.home', ()=>{
+    location.href = './index.html'
+  })
 
-// 导航栏hover
-(function(){
+  $('#header').on('click', '.class2 li', ()=>{
+      location.href = './goodsList.html'
+  })
+
   $('#header').on('mouseenter', '.navList>li', function(e){  
     $target = $(e.target)
-    // console.log( $target.find('ul') );
     $target.children().show()  // 或者是 $target.find('ul').show()
-    
-  });
-  // $('#header').on('mousemove', '.navList>li', function(e){  
-  //   $target = $(e.target)
-  //   console.log( $('.navList>li').children()  );  //  ==   $target
-  // });
-  $('#header').on('mouseleave', '.navList', function(e){  
+  })
+  $('#header').on('mouseleave', '.navList>li', function(e){  
     $target = $(e.target)
-    console.log($target.context.className);
-    let classList = [...$target.context.classList]
-    if (classList.includes('class1') || classList.includes('class2')) {
     $('.navList>li ul').hide()
-
-    }
   })
 
-    
+  $('#header').on('mouseenter', '.navList ul li', function(e){  
+    $target = $(e.target)
+    $target.show()
+  })
+  $('#header').on('mouseleave', '.navList ul li', function(e){  
+    $target = $(e.target)
+    $('.navList>li ul').hide()
+  })
 })();
-
 
 // 轮播图
 (function banner(){
@@ -77,9 +93,7 @@
       prevEl: '.swiper-button-prev',
     },
   });
-
 })();
-
 
 // 回到顶部
 (function toTop(){
@@ -117,9 +131,6 @@
   }
 })();
 
-
-
-
 // 底部删除悬浮栏
 (function delFloat(){
   $del = $('.del')
@@ -128,3 +139,25 @@
     $scan.remove()
   })
 })();
+
+// 跳转到详情页
+(function toDetail(){
+  $imgs = $('.goods-main img')
+  $imgs.each( ()=>{
+    $imgs.click( ()=>{
+      location.href = './goodsDetail.html'
+    })
+  })
+})();
+
+// 渲染数据延迟加载
+// $(function (){
+//   $('.bestGoods').on('load','.bestGoods img', function(){   
+//     $(function() {
+//       $("img").lazyload({
+//         effect: "fadeIn"
+//       })
+//     });
+//   })
+// })();
+

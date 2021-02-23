@@ -5,13 +5,12 @@ define(['jquery'], function($){
   function download(){
     $.ajax({
       type: 'get',
-      url: '../data/goodsList.json',
+      url: './data/goodsList.json',
       success: function(arr){
-        console.log(arr)
         for ( var i = 0, len = arr.length; i < len; i++ ) {
           $(`
             <li class="listItem">
-              <a href="./goodsDetail.html?${arr[i].id}"><img src="${arr[i].imgurl}" alt=""></a>
+              <a href="javascript:void(0);"><div class="img"><img src="${arr[i].imgurl}" alt=""><div class="addGoods" data-id="${arr[i].id}">加入购物车</div></div></a>
               <h3><a href="#">${arr[i].title}</a></h3>
               <div class="itemPrice">
                 <span>售价￥${arr[i].originPrice}</span>
@@ -22,9 +21,36 @@ define(['jquery'], function($){
         }
       },
       error: function(msg){
-        console.log(msg);
+        console.log(msg)
       }
     })
+
+    // 数据加载完成后点击加入购物车添加事件
+    $('.list').on('click','.listItem .addGoods',function (){
+      // 存储商品id和数量
+      // "goods"=>"[{'id':'abc4','num':2},{'id':'abc2','num':1}]"
+      var id = $(this).attr('data-id') //当前点击商品的id
+      var goodsArr = [] //购物车数据的数组
+      if (localStorage.getItem('goods')) {
+        goodsArr = JSON.parse( localStorage.getItem('goods') )
+      }
+      var flag = false
+     
+      $.each(goodsArr, function(index, item){
+        if (item.id === id){
+        item.num++
+        flag = true
+        }
+      })  
+      if (!flag) {
+        goodsArr.push({"id":id,"num":1})
+      }
+      // 数据更新到本地存储
+      localStorage.setItem('goods', JSON.stringify(goodsArr))
+      alert('加入购物车成功！')
+
+    })
+
   }
   // 头部添加
   function header(){
@@ -91,18 +117,18 @@ define(['jquery'], function($){
 
       <div id="nav">
         <div class="nav-main">
-          <a href="#"></a>
+          <a href="./index.html"></a>
           <ul class="navList">
             <li>首页 </li>
 
             <li class="fleece1">摇粒绒 
-              <ul class="fleece">
+              <ul class="class2 fleece">
                 <li>摇粒绒</li>
                 <li>防羊羔绒</li>
               </ul>
             </li>
             <li class="business1">商务衬衫 
-              <ul class="business">
+              <ul class="class2 business">
                 <li>长袖免烫</li>
                 <li>舒适商务</li>
                 <li>高支衬衫</li>
@@ -111,7 +137,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="relax1">休闲衬衫 
-              <ul class="relax">
+              <ul class="class2 relax">
                 <li>牛津纺</li>
                 <li>法兰绒</li>
                 <li>灯芯绒</li>
@@ -124,7 +150,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="sweater1">卫衣 
-              <ul class="sweater">
+              <ul class="class2 sweater">
                 <li>时尚款</li>
                 <li>开衫</li>
                 <li>圆领</li>
@@ -132,7 +158,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="coat1">外套 
-              <ul class="coat">
+              <ul class="class2 coat">
                 <li>羽绒服</li>
                 <li>大衣</li>
                 <li>夹克</li>
@@ -142,7 +168,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="knitwear1">针织衫 
-              <ul class="knitwear">
+              <ul class="class2 knitwear">
                 <li>圆领</li>
                 <li>V领开衫</li>
                 <li>polo领</li>
@@ -151,7 +177,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="pants1">裤装 
-              <ul class="pants">
+              <ul class="class2 pants">
                 <li>牛仔裤</li>
                 <li>休闲裤</li>
                 <li>针织裤</li>
@@ -162,7 +188,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="shoe1">鞋 
-              <ul class="shoe">
+              <ul class="class2 shoe">
                 <li>帆布鞋</li>
                 <li>休闲鞋</li>
                 <li>运动鞋</li>
@@ -173,7 +199,7 @@ define(['jquery'], function($){
               </ul>
             </li>
             <li class="furniture1">家具配饰 
-              <ul class="furniture">
+              <ul class="class2 furniture">
                 <li>袜品</li>
                 <li>内衣</li>
                 <li>家居服</li>
@@ -195,6 +221,17 @@ define(['jquery'], function($){
         </div>
       </div> 
     `).appendTo('#header')
+
+    var lis = document.querySelectorAll('#nav .class2 li')
+    var liIndex = document.querySelector('.navList li:nth-child(1)')
+    liIndex.onclick = function (){
+      location.href = './index.html'
+    }
+    for (var i = 0, len = lis.length; i < len; i++){
+      lis[i].onclick = function (){
+        location.href = './goodsList.html'
+      }
+    }
   }
   // 尾部添加
   function footer(){

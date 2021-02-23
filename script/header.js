@@ -1,10 +1,26 @@
 define(function (){
-  // function header(){
-  //   $('#header').load('header.html')
-  // }
-  // function footer(){
-  //   $('#footer').load('footer.html')
-  // }
+ 
+  //数据下载
+  function download(){
+    $.ajax({
+      type: 'get',
+      url: '../data/index.json',
+      success: function(arr){
+        for ( var i = 0, len = arr.length; i < len; i++ ) {
+          $(`
+          <li> 
+            <a href="./goodsDetail.html">
+              <img original="${arr[i].imgurl}" src="${arr[i].imgurl}" alt="" id="${arr[i].id}">
+            </a>
+          </li>
+          `).prependTo('.lastImg')
+        }
+      },
+      error: function(msg){
+        console.log(msg)
+      }
+    })
+  }
   
   // 头部添加
   function header(){
@@ -61,7 +77,7 @@ define(function (){
                     <span>共计(未计算促销折扣)</span> <br>
                     <span>￥158</span>
                   </div>
-                  <button>查看购物车(1件)</button>
+                  <button class="checkCart">查看购物车(1件)</button>
                 </div>
               </div>
             </div>   
@@ -73,7 +89,7 @@ define(function (){
         <div class="nav-main">
           <a href="#"></a>
           <ul class="navList">
-            <li>首页 </li>
+            <li class="home">首页 </li>
 
             <li class="class1 fleece1">摇粒绒 
               <ul class="class2 fleece">
@@ -227,7 +243,8 @@ define(function (){
   
 
   return{
-    fn: header,
-    fn1: footer,
+    fn1: download,
+    fn2: header,
+    fn3: footer
   }
 })

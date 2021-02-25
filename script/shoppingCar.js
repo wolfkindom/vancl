@@ -24,7 +24,7 @@ $(function (){
                 <td class="price">￥${item.salePrice}</td>
                 <td class="num"><div><a class="decrease" data-id="${item.id}">-</a><input type="text" value=${obj.num}><a class="increase" data-id="${item.id}">+</a></div></td>
                 <td class="cheap">-</td>
-                <td class="subtotal">￥${(item.salePrice * obj.num).toFixed(1)}</td>
+                <td class="subtotal"><div>￥${(item.salePrice * obj.num).toFixed(1)}</div></td>
                 <td class="operate" data-id="${item.id}">删除</td>
                 <td class="white-space-w"></td>
               </tr>
@@ -60,7 +60,7 @@ $(function (){
         // 全选1与金额总计的关联
         $.each($subtotal, function (index, item){
           // totalPrice += Number(item.innerText.slice(1)) ---方法1
-          totalPrice += parseInt($(item).text().slice(1)) // ---方法2
+          totalPrice += Number($(item).text().slice(1)) // ---方法2
         })
 
         // 临界值，当购物车没有商品时计算渲染不同精度的数据
@@ -254,6 +254,13 @@ $(function (){
 
     // 删除1
     $('.cartProduct').on('click','tbody tr td.operate',function (){
+      $subtotal = $('tbody .subtotal')
+      $num = $('tbody .num input')
+      $checks = $('tbody .choose input')
+      
+      var totalPrice = 0 
+      var totalNum = 0
+      var flag = false
       // 当前点击的商品id
       var id = $(this).attr('data-id')
       $.each(goodsArr,function (index, item){
@@ -265,27 +272,37 @@ $(function (){
       // 删除1移除商品(dom结构)
       $(this).parent().remove()
       // 更新本地存储的数据
-      // localStorage.setItem('goods',JSON.stringify(goodsArr))
+      localStorage.setItem('goods',JSON.stringify(goodsArr))
       if (goodsArr.length <= 0) {
-        // localStorage.removeItem('goods')
+        localStorage.removeItem('goods')
         var newTr = `<tr><td colspan="11"><h1 style="color:#aaa">购物车空空如也，快去加购商品吧！</h1></td></tr>`
         $('tbody .emptyGoods').before(newTr)
+        $('.cartProduct thead .theadAll').prop('checked',false)
+        $('.summary .bar input').prop('checked',false)
       }
 
-      var $subtotal = $('tbody .subtotal')
-      var $num = $('tbody .num input')
-      var totalPrice = 0 
-      var totalNum = 0
-      // 关联删除1和金额总计
-      $.each($subtotal, function (index, item){
-        totalPrice += Number($(item).text().slice(1))
+      // 判断用户点击删除1的时候是否有单选，单选则将金额总计和数量总计归零，否则什么也不做
+      $.each($checks, function (index, item){
+        if ($(item).prop('checked')){
+          flag = true
+        }
       })
-      $('.summary .total em').text('￥'+totalPrice)
-      // 关联删除1和数量总计
-      $.each($num, function (index, item){
-        totalNum += parseInt($(item).val())
-      })
-      $('.summary .bar span em').text(totalNum)
+      if (!flag){ //一个没选点删除1什么也不做
+        return
+      } else {
+        $('.summary .total em').text('￥'+'0')
+        $('.summary .bar span em').text(0)
+        // // 关联删除1和金额总计         ---删除后重新计算金额
+        // $.each($subtotal, function (index, item){
+        //   totalPrice += Number($(item).text().slice(1))
+        // })
+        // $('.summary .total em').text('￥'+totalPrice)
+        // // 关联删除1和数量总计         ---删除后重新计算数量
+        // $.each($num, function (index, item){
+        //   totalNum += parseInt($(item).val())
+        // })
+        // $('.summary .bar span em').text(totalNum)
+      }
     })
 
     // 删除2(删除特定勾选的复选框商品后默认自动全选，并重新计算金额和数量总计)
@@ -377,13 +394,18 @@ $(function (){
     // 结算框支付跳转
     $('.cartProduct').on('click','.calculate .goPay',function (){
       $count = $('.summary .total em').text().slice(1)
-      alert('正在跳转支付页面，亲，您即将消费 '+$count+' 元，如年后钱包空空，小店也概不赊账，如实在想买，可提供特别滴等价交换服务哟~~详情联系客服')
+      console.log($count);
+      if (!parseInt($count)){
+        alert('您还未选购商品，快快去加购吧~')
+      } else {
+        alert('正在跳转支付页面，亲，您即将消费 '+$count+' 元，如年后钱包空空，小店也概不赊账，如实在想买，可提供特别滴等价交换服务哟~~详情联系客服')
+      }
     })
   
 
   } else {
   
-    var newTr = `<tr><td colspan="11"><h1 style="color:#aaa">购物车空空如也，快去加购商品吧！</h1></td></tr>`
+    var newTr = `<tr><td colspan="11"><h1 style="color:#aaa;text-align:center">购物车空空如也，快去加购商品吧！</h1></td></tr>`
     $('tbody .emptyGoods').before(newTr)
     
   }

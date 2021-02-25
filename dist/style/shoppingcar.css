@@ -112,7 +112,7 @@
   border-collapse: separate; }
 
 .cartProduct table td.photo {
-  width: 90px; }
+  width: 50px; }
 
 .cartProduct table td.photo img {
   width: 50px;
@@ -132,12 +132,11 @@
   border-bottom: 1px solid #B7B7B7;
   line-height: 38px; }
 
-.cartProduct th, .cartProduct td {
-  text-align: center;
-  vertical-align: middle; }
-
 .cartProduct thead .image {
-  width: 60px; }
+  width: 40px; }
+
+.cartProduct thead .goodsName {
+  padding-left: 20px; }
 
 .cartProduct thead .th2 {
   width: 70px; }
@@ -168,10 +167,18 @@
   padding-left: 20px; }
 
 .cartProduct tbody .goodsInfo {
-  width: 337px; }
+  width: 283px;
+  text-align: center; }
+
+.cartProduct tbody .size {
+  width: 43px;
+  text-align: center; }
+
+.cartProduct tbody .price {
+  text-align: center; }
 
 .cartProduct tbody .num {
-  width: 100px; }
+  width: 113px; }
 
 .cartProduct tbody .num div {
   margin-left: 27px; }
@@ -192,8 +199,19 @@
   float: left;
   cursor: pointer; }
 
+.cartProduct tbody .cheap {
+  text-align: center; }
+
+.cartProduct tbody .subtotal {
+  width: 113px;
+  text-align: center; }
+
+.cartProduct tbody .subtotal div {
+  overflow: hidden; }
+
 .cartProduct tbody .operate {
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: center; }
 
 .summary {
   padding: 12px 10px 10px 0;

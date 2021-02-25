@@ -1,5 +1,5 @@
 define(function (){
- 
+
   //数据下载
   function download(){
     $.ajax({

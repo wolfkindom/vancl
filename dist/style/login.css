@@ -23,7 +23,8 @@
 .header-con p a {
   display: block;
   margin: 19px 7px 0 0;
-  color: #000; }
+  color: #000;
+  font-size: 12px; }
 
 .header-con p a:hover {
   color: #b42025;
@@ -81,10 +82,7 @@
   height: 35px;
   line-height: 35px;
   float: left;
-  text-align: center;
-  background: #b42025;
-  color: #fff;
-  font-weight: bolder; }
+  text-align: center; }
 
 .login .tag li {
   width: 200px;
@@ -97,12 +95,20 @@
   cursor: pointer;
   font-size: 14px; }
 
+.login .tag li.tabNow {
+  background: #b42025;
+  color: #fff;
+  font-weight: bolder; }
+
 .login .userInfo {
   width: 415px;
   height: 230px;
   padding: 10px 20px 10px; }
 
-.login .userInfo .user input {
+.login .userInfo input::-webkit-input-placeholder {
+  color: #c7b5b5; }
+
+.login .userInfo input {
   height: 45px;
   line-height: 45px;
   color: #acacac;
@@ -112,18 +118,12 @@
   text-indent: 10px;
   background: #fff;
   border: 1px solid #cbcbcb;
+  cursor: default; }
+
+.login .userInfo .user input {
   margin-top: 30px; }
 
 .login .userInfo .pass input {
-  height: 45px;
-  line-height: 45px;
-  color: #acacac;
-  width: 360px;
-  text-align: left;
-  font-size: 14px;
-  text-indent: 10px;
-  background: #fff;
-  border: 1px solid #cbcbcb;
   margin-top: 20px; }
 
 .login .userInfo .btn {

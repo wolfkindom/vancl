@@ -68,6 +68,9 @@
   width: 415px;
   height: 230px; }
 
+.login .userInfo input::-webkit-input-placeholder {
+  color: #c7b5b5; }
+
 .login .userInfo > div:not(.btn) {
   height: 67px; }
 
@@ -76,7 +79,8 @@
   font-size: 12px;
   margin: 0 0 0 0;
   float: left;
-  height: 20px; }
+  height: 20px;
+  display: none; }
 
 .login .userInfo .tipsVerifyCode {
   color: #b52024;
@@ -84,7 +88,8 @@
   border: 1px solid lightcoral;
   width: 96px;
   font-size: 12px;
-  padding: 2px 6px; }
+  padding: 2px 6px;
+  display: none; }
 
 .login .userInfo > div > input {
   height: 43px;
@@ -165,6 +170,9 @@
   text-align: center;
   font-size: 16px;
   margin: 14px 0 0 0; }
+
+.login .userInfo .btn .registerNow:hover {
+  text-decoration: underline; }
 
 .bottom {
   width: 980px;

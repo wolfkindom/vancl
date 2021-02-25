@@ -2,7 +2,7 @@
 .header-con{width: 1200px;height: 40px;margin: 0 auto;border-bottom: 1px solid #7a7f89;color: #333333;margin-top: 15px;padding: 0 0 15px 0;}
 .header-con .logo{background: url('../image/logo.jpg') no-repeat left top;width: 187px;height: 50px;display: inline-block;}
 .header-con p{float: right;}
-.header-con p a{display:block;  margin: 19px 7px 0 0;color: #000;}
+.header-con p a{display:block;  margin: 19px 7px 0 0;color: #000;font-size: 12px;}
 .header-con p a:hover{color: #b42025;text-decoration: underline;}
 
 #wrap{width: 1200px;height: 470px;border-bottom: 1px solid #999;margin: 50px auto 10px;}
@@ -15,11 +15,14 @@
 .advertise{float: left;margin: 18px 0 0 150px;}
 
 .login{width: 400px;border: 1px solid #D1D1D1;background-color: #fff;float: right;margin: 18px 100px 20px 0;}
-.login .tag .normal{width: 200px;height: 35px; line-height: 35px;float: left;text-align: center;background: #b42025;color: #fff;font-weight: bolder;}
+.login .tag .normal{width: 200px;height: 35px; line-height: 35px;float: left;text-align: center;}
 .login .tag li{width: 200px;height: 35px;line-height: 35px;float: left;text-align: center;background: #f5f5f5;color: #656565;cursor: pointer;font-size: 14px;}
+.login .tag li.tabNow{background: #b42025;color: #fff;font-weight: bolder;}
 .login .userInfo{width: 415px;height: 230px;padding: 10px 20px 10px;}
-.login .userInfo .user input{height: 45px;line-height: 45px;color: #acacac;width: 360px;text-align: left;font-size: 14px;text-indent: 10px;background: #fff;border: 1px solid #cbcbcb;margin-top: 30px;}
-.login .userInfo .pass input{height: 45px;line-height: 45px;color: #acacac;width: 360px;text-align: left;font-size: 14px;text-indent: 10px;background: #fff;border: 1px solid #cbcbcb;margin-top: 20px;}
+.login .userInfo input::-webkit-input-placeholder{color: rgb(199, 181, 181);}
+.login .userInfo input{height: 45px;line-height: 45px;color: #acacac;width: 360px;text-align: left;font-size: 14px;text-indent: 10px;background: #fff;border: 1px solid #cbcbcb;cursor: default;}
+.login .userInfo .user input{margin-top: 30px;}
+.login .userInfo .pass input{margin-top: 20px;}
 .login .userInfo .btn{width: 360px;overflow: hidden;}
 .login .userInfo .btn .forget{width:56px;height:30px;color: #b42025;font-size: 14px;font-weight: bolder;text-align: right;line-height: 30px;float: right;margin: 14px 0 0 0;}
 .login .userInfo .btn .vanclLogin{width: 360px;display: block;height: 45px;line-height: 45px;background: #b42025;color: #fff;text-align: center;font-size: 20px;margin: 45px 0 0 0;}

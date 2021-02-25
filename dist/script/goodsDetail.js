@@ -259,3 +259,25 @@ $(function lazyLoad() {
       }, 20);
   }) 
 })();
+
+ 
+// 加入购物车
+$('.btn .addCart').click(function (){
+  var id = $(this).attr('data-id') 
+  var goodsArr = []
+  if (localStorage.getItem('goods')) {
+    goodsArr = JSON.parse( localStorage.getItem('goods') )
+  }
+  var flag = false
+  $.each(goodsArr, function(index, item){
+    if (item.id === id){
+    item.num++
+    flag = true
+    }
+  })  
+  if (!flag) {
+    goodsArr.push({"id":id,"num":1})
+  }
+  localStorage.setItem('goods', JSON.stringify(goodsArr))
+  alert('加入购物车成功！')
+})

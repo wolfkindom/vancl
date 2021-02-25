@@ -69,13 +69,17 @@ $(function (){
   $ipts.eq(1).blur(function (){
     var val = $(this).val().replace(/\s+/g,'')
     var reg = /^1[3456789]\d{9}$/
-    if (reg.test(val)) {
+    if (!val){
       $tips2_5.eq(0).css('display','none')
-      arr[1] = 1
     } else {
-      arr[1] = 0
-      $tips2_5.eq(0).css('display','block')
-    }
+      if (reg.test(val)) {
+        $tips2_5.eq(0).css('display','none')
+        arr[1] = 1
+      } else {
+        arr[1] = 0
+        $tips2_5.eq(0).css('display','block')
+      }
+    } 
   })
 
   $ipts.eq(2).blur(function (){
